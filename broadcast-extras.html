@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Broadcast Layout</title>
+  <link rel="stylesheet" href="broadcast-extras.css">
+</head>
+<body>
+  <main id="layout">
+    <div class="transition-panels" aria-hidden="true"><i></i><i></i><i></i></div>
+    <header>
+      <img src="assets/franklin-lower-third-mark.png" alt="">
+      <div><strong>FRANKLIN CHAPEL LIVE</strong><span>LAURINBURG, NORTH CAROLINA</span></div>
+      <b>WE BELIEVE GOD</b>
+    </header>
+
+    <section class="transition-copy">
+      <img src="assets/franklin-lower-third-mark.png" alt="">
+      <small>FRANKLIN CHAPEL LIVE</small>
+      <strong>WE BELIEVE GOD</strong>
+    </section>
+
+    <section class="sermon-layout">
+      <div class="camera-window"><span>MAIN CAMERA</span></div>
+      <aside>
+        <small>TODAY’S MESSAGE</small>
+        <h1 id="messageTitle">MESSAGE TITLE</h1>
+        <p id="messageSpeaker">PASTOR / SPEAKER</p>
+        <div><span>SCRIPTURE</span><strong id="messageScripture">BOOK 1:1</strong></div>
+      </aside>
+    </section>
+
+    <section class="pip-layout">
+      <div class="main-camera"><span>MAIN CAMERA</span></div>
+      <div class="guest-camera"><span id="guestLabel">GUEST / REMOTE</span></div>
+    </section>
+
+    <section class="split-layout">
+      <div><span id="leftLabel">PASTOR / HOST</span></div>
+      <div><span id="rightLabel">GUEST</span></div>
+    </section>
+
+    <img class="anniversary" src="assets/franklin-150-years-white-glow.png" alt="150 Years">
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const selected = params.get("layout") || "transition";
+    document.body.dataset.layout = selected;
+    const values = {
+      messageTitle: params.get("title"),
+      messageSpeaker: params.get("speaker"),
+      messageScripture: params.get("scripture"),
+      guestLabel: params.get("guest"),
+      leftLabel: params.get("left"),
+      rightLabel: params.get("right")
+    };
+    for (const [id,value] of Object.entries(values)) {
+      if (value) document.getElementById(id).textContent = value;
+    }
+  </script>
+</body>
+</html>
