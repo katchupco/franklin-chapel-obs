@@ -536,6 +536,7 @@ body[data-scene="live"] .anniversary-badge img{
   width:90%;
   height:90%;
   object-fit:contain;
+  filter:drop-shadow(0 0 7px rgba(174,82,255,.78)) drop-shadow(0 5px 12px rgba(0,0,0,.72));
 }
 
 body[data-scene="lowerthird"] .wash,
