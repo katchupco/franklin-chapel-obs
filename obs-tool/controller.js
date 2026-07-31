@@ -54,9 +54,9 @@ data.forEach((preset,index) => {
         action:"show",
         id:index,
         ...Object.fromEntries(fields.slice(1).map((f,i)=>[f,data[index][i+1]])),
-        duration:12,
+        duration:15,
         loop:true,
-        interval:45
+        interval:60
       });
     } else {
       send({action:"hide",id:index});
