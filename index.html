@@ -129,35 +129,51 @@
     const sceneName = params.get("scene") || "starting";
     document.body.dataset.scene = sceneName;
 
-    const galleryPool = [
-      "assets/current-scripture.jpg",
-      "assets/current-offering.jpg",
-      "assets/current-outside.jpg",
-      "assets/current-newbigzo.png",
-      "assets/current-gallery-fellowship.jpg",
-      "assets/current-gallery-sanctuary.jpg",
-      "assets/current-gallery-tea.jpg",
-      "assets/gallery-IMG_3107.jpg",
-      "assets/gallery-IMG_3112.jpg",
-      "assets/gallery-IMG_3114.jpg",
-      "assets/gallery-IMG_3121.jpg",
-      "assets/gallery-IMG_3124.jpg",
-      "assets/gallery-IMG_3127.jpg",
-      "assets/gallery-IMG_3131.jpg",
-      "assets/gallery-IMG_3134.jpg",
-      "assets/gallery-IMG_3137.jpg",
-      "assets/gallery-IMG_3139.jpg",
-      "assets/gallery-IMG_3140.jpg",
-      "assets/gallery-IMG_3141.jpg"
+    const galleryGroups = [
+      [
+        "assets/2026-pulpit.jpg",
+        "assets/2026-congregation.jpg",
+        "assets/current-scripture.jpg"
+      ],
+      [
+        "assets/2026-worship-family.jpg",
+        "assets/current-gallery-sanctuary.jpg"
+      ],
+      [
+        "assets/2026-youth-service.jpg",
+        "assets/gallery-IMG_3107.jpg",
+        "assets/gallery-IMG_3114.jpg"
+      ],
+      [
+        "assets/2026-fellowship-tea.jpg",
+        "assets/current-gallery-fellowship.jpg",
+        "assets/current-gallery-tea.jpg"
+      ],
+      [
+        "assets/2026-celebration.jpg",
+        "assets/gallery-IMG_3124.jpg",
+        "assets/gallery-IMG_3134.jpg"
+      ],
+      [
+        "assets/offering-real-2026.jpg",
+        "assets/gallery-IMG_3127.jpg",
+        "assets/gallery-IMG_3131.jpg"
+      ],
+      [
+        "assets/current-outside.jpg",
+        "assets/gallery-IMG_3137.jpg",
+        "assets/gallery-IMG_3140.jpg"
+      ]
     ];
     if (sceneName === "starting" || sceneName === "countdown") {
-      const shuffled = [...galleryPool];
+      const shuffled = galleryGroups.map(group =>
+        group[Math.floor(Math.random() * group.length)]
+      );
       for (let index = shuffled.length - 1; index > 0; index--) {
         const randomIndex = Math.floor(Math.random() * (index + 1));
         [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
       }
       document.querySelector(".starting-gallery").innerHTML = shuffled
-        .slice(0, 7)
         .map(src => `<figure><img src="${src}" alt=""></figure>`)
         .join("");
     }
