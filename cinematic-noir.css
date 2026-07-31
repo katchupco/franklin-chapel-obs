@@ -168,6 +168,13 @@ body[data-scene="welcome"] .brand span,body[data-scene="starting"] .brand span,b
   font-size:clamp(10px,.9vw,18px);
   animation:copyReveal .75s .55s cubic-bezier(.2,.8,.2,1) both;
 }
+.social-strip{display:none;position:absolute;z-index:5;left:8%;bottom:7%;align-items:center;gap:15px;color:#fff;animation:socialReveal .8s 1.15s cubic-bezier(.16,1,.3,1) both}
+body[data-scene="welcome"] .social-strip{display:flex}
+.social-icons{display:flex;align-items:center;gap:9px;padding-right:15px;border-right:1px solid rgba(255,255,255,.28)}
+.social-icons svg{width:22px;height:22px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px rgba(169,76,255,.45));animation:socialIcon 4s ease-in-out infinite}
+.social-icons svg:nth-child(2){animation-delay:.18s}.social-icons svg:nth-child(3){animation-delay:.36s}.social-icons svg:nth-child(4){animation-delay:.54s}.social-icons .fill{fill:currentColor;stroke:none}
+.social-strip span{color:var(--violet);font-size:10px;font-weight:900;letter-spacing:.18em}.social-strip strong{font-size:14px;letter-spacing:.1em}
+@keyframes socialReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes socialIcon{0%,75%,100%{opacity:.72;transform:translateY(0)}84%{opacity:1;transform:translateY(-3px)}}
 
 body[data-scene="welcome"] .scene-photo{
   background-image:url("assets/current-outside.jpg");
