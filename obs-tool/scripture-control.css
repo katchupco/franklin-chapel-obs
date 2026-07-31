@@ -9,10 +9,21 @@ header small{margin-top:3px;color:#bfaed0;font-size:10px}
 #status.live{color:#dbaaff}
 main{margin:12px;padding:15px;border:1px solid #493055;border-radius:13px;background:linear-gradient(145deg,#130a1c,#0b0710);box-shadow:0 14px 34px rgba(0,0,0,.28)}
 label{display:block;margin:10px 0;color:#b2a3bd;font-size:10px;font-weight:900;letter-spacing:.08em}
-input,textarea{width:100%;margin-top:6px;padding:11px;border:1px solid #3c2a49;border-radius:8px;outline:none;background:#0d0912;color:#fff;font:600 14px Arial}
+input,textarea,select{width:100%;margin-top:6px;padding:11px;border:1px solid #3c2a49;border-radius:8px;outline:none;background:#0d0912;color:#fff;font:600 14px Arial}
 textarea{resize:vertical;line-height:1.45}
-input:focus,textarea:focus{border-color:var(--violet)}
+input:focus,textarea:focus,select:focus{border-color:var(--violet)}
 button{width:100%;padding:12px;border:0;border-radius:8px;color:#fff;background:linear-gradient(135deg,var(--violet),var(--purple));font-weight:900;cursor:pointer}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.verse-preview{margin-top:14px;padding:14px;border:1px solid #3d2949;border-radius:10px;background:#0d0912}
+.verse-preview span{color:var(--violet);font-size:9px;font-weight:900;letter-spacing:.12em}
+.verse-preview strong{display:block;margin-top:7px;font-size:14px;letter-spacing:.05em}
+.verse-preview p{min-height:44px;margin:7px 0 0;color:#d9d0df;font-size:12px;line-height:1.4}
+.transport{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+button.secondary{border:1px solid #563968;background:#17101e;font-size:10px;letter-spacing:.08em}
+.auto-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}
+.auto-row .check{display:flex;align-items:center;gap:8px;margin:0}
+.auto-row .check input{width:auto;margin:0;accent-color:var(--purple)}
+.auto-row select{width:92px;margin:0;padding:8px;font-size:10px}
 .on-air-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;padding:14px;border:1px solid #3d2949;border-radius:10px;background:#0d0912}
 .on-air-row>div strong,.on-air-row>div small{display:block}
 .on-air-row>div strong{font-size:11px;letter-spacing:.1em}

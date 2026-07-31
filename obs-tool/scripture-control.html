@@ -9,26 +9,57 @@
 <body>
   <header>
     <span>◆</span>
-    <div><strong>FRANKLIN CHAPEL</strong><small>SCRIPTURE CONTROL</small></div>
+    <div><strong>FRANKLIN CHAPEL</strong><small>LIVE SCRIPTURE CONTROL</small></div>
     <b id="status">READY</b>
   </header>
   <main>
-    <label>Book &amp; verse
-      <input id="reference" value="JOHN 3:16" placeholder="Example: John 3:16">
+    <div class="field-grid">
+      <label>Translation
+        <select id="translation">
+          <option value="kjv">KJV — King James Version</option>
+          <option value="web">WEB — World English Bible</option>
+          <option value="asv">ASV — American Standard Version</option>
+        </select>
+      </label>
+      <label>Book
+        <select id="book"></select>
+      </label>
+    </div>
+    <label>Chapter and verse
+      <input id="passage" value="3:16" placeholder="Example: 3:16 or 3:16-21">
     </label>
-    <label>Scripture text
-      <textarea id="text" rows="7" placeholder="Type or paste the scripture text here.">For God so loved the world, that he gave his only begotten Son.</textarea>
-    </label>
-    <button id="update">UPDATE TEXT</button>
+    <button id="load">FIND SCRIPTURE</button>
+
+    <section class="verse-preview">
+      <span id="verseCount">NO PASSAGE LOADED</span>
+      <strong id="previewReference">JOHN 3:16 • KJV</strong>
+      <p id="previewText">Choose a translation, book, and passage, then select Find Scripture.</p>
+    </section>
+
+    <div class="transport">
+      <button id="previous" class="secondary">‹ PREVIOUS</button>
+      <button id="next" class="secondary">NEXT ›</button>
+    </div>
+
+    <div class="auto-row">
+      <label class="check"><input id="autoAdvance" type="checkbox" checked> AUTO-ADVANCE VERSES</label>
+      <select id="interval" aria-label="Auto-advance speed">
+        <option value="8">8 SEC</option>
+        <option value="10" selected>10 SEC</option>
+        <option value="12">12 SEC</option>
+        <option value="15">15 SEC</option>
+      </select>
+    </div>
+
     <div class="on-air-row">
-      <div><strong>CENTER SCRIPTURE</strong><small>SHOW OVER THE LIVE CAMERA</small></div>
+      <div><strong>SCRIPTURE BANNER</strong><small>CENTERED AT THE BOTTOM</small></div>
       <label class="toggle">
         <input id="visible" type="checkbox">
         <span><i></i></span>
         <b>OFF</b>
       </label>
     </div>
-    <p>Text saves automatically. Update Text also updates the full-screen Scripture scene.</p>
+    <p>When ON, a multi-verse passage advances automatically. Use Previous or Next to follow the reader manually.</p>
   </main>
   <footer>WE BELIEVE GOD</footer>
   <script src="scripture-control.js"></script>
