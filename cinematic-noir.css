@@ -196,7 +196,7 @@ body[data-scene="brb"] .scene-photo{
 }
 
 body[data-scene="ending"] .scene-photo{
-  background-position:96% bottom;
+  background-position:calc(100% + 60px) bottom;
   background-size:contain;
   background-repeat:no-repeat;
   filter:saturate(.9) contrast(1.04);
@@ -210,9 +210,11 @@ body[data-scene="ending"] .broadcast-bg{
 }
 body[data-scene="ending"] .scene-photo::after{
   background:
-    linear-gradient(90deg,rgba(4,3,6,1) 0%,rgba(5,4,8,.96) 40%,rgba(55,15,91,.20) 70%,transparent 100%),
+    linear-gradient(90deg,rgba(4,3,6,1) 0%,rgba(5,4,8,.97) 42%,rgba(43,11,70,.46) 58%,rgba(55,15,91,.14) 74%,transparent 100%),
     linear-gradient(0deg,rgba(35,8,57,.48),transparent 46%);
 }
+body[data-scene="ending"] .message h1{text-shadow:0 8px 34px rgba(0,0,0,.72),0 0 24px rgba(89,30,139,.25)}
+body[data-scene="ending"] .message p{text-shadow:0 3px 14px rgba(0,0,0,.82)}
 
 body[data-scene="scripture"] .scripture-card{
   z-index:4;
