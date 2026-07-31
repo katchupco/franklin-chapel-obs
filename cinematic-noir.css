@@ -199,7 +199,7 @@ body[data-scene="ending"] .scene-photo{
   background-position:calc(100% + 60px) bottom;
   background-size:contain;
   background-repeat:no-repeat;
-  filter:saturate(.9) contrast(1.04);
+  filter:none;
   animation:none;
 }
 body[data-scene="ending"] .broadcast-bg{
@@ -209,9 +209,9 @@ body[data-scene="ending"] .broadcast-bg{
     linear-gradient(115deg,#050407 0%,#140822 53%,#47127b 100%);
 }
 body[data-scene="ending"] .scene-photo::after{
-  background:
-    linear-gradient(90deg,rgba(4,3,6,1) 0%,rgba(5,4,8,.97) 38%,rgba(17,7,24,.48) 49%,rgba(8,5,11,.10) 58%,transparent 64%),
-    linear-gradient(90deg,rgba(35,8,57,.28),transparent 52%);
+  right:auto;
+  width:46%;
+  background:linear-gradient(90deg,rgba(4,3,6,1) 0%,rgba(5,4,8,.96) 72%,transparent 100%);
 }
 body[data-scene="ending"] .message h1{text-shadow:0 8px 34px rgba(0,0,0,.72),0 0 24px rgba(89,30,139,.25)}
 body[data-scene="ending"] .message p{text-shadow:0 3px 14px rgba(0,0,0,.82)}
