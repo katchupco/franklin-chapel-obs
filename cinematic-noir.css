@@ -100,6 +100,20 @@ body[data-media="video"] .scene-photo::after{
   z-index:2;
   pointer-events:none;
 }
+body:is(
+  [data-scene="welcome"],
+  [data-scene="scripture"],
+  [data-scene="announcement"],
+  [data-scene="offering"],
+  [data-scene="brb"],
+  [data-scene="ending"]
+) .wash{
+  background:
+    radial-gradient(circle at 84% 22%,rgba(167,70,255,.15),transparent 29%),
+    radial-gradient(circle at 18% 84%,rgba(93,28,171,.09),transparent 34%);
+  background-size:125% 125%;
+  animation:premiumPurpleDrift 22s ease-in-out infinite alternate;
+}
 .wash::before{
   content:"";
   position:absolute;
@@ -607,8 +621,12 @@ body[data-scene="scripturelower"] .wash{display:none}
   0%,100%{top:7px;opacity:.2}
   50%{top:calc(100% - 9px);opacity:1}
 }
+@keyframes premiumPurpleDrift{
+  from{background-position:100% 0,0 100%;opacity:.72}
+  to{background-position:72% 18%,20% 78%;opacity:1}
+}
 @media (prefers-reduced-motion:reduce){
-  .scene-video,.scene-photo,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
+  .scene-video,.scene-photo,.wash,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
   .scripture-card,.events article,.starting-gallery figure,.starting-gallery img,
   .anniversary-badge,.anniversary-badge::before,.anniversary-badge::after,
   .countdown span,.countdown strong,.countdown p,.giving-options article,
