@@ -138,6 +138,9 @@ body[data-media="video"] .scene-photo::after{
 }
 .brand strong{font-size:clamp(12px,1vw,20px)}
 .brand span{font-size:clamp(8px,.6vw,12px)}
+body[data-scene="welcome"] .site-logo,body[data-scene="starting"] .site-logo,body[data-scene="countdown"] .site-logo,body[data-scene="ending"] .site-logo{width:85px;height:85px}
+body[data-scene="welcome"] .brand strong,body[data-scene="starting"] .brand strong,body[data-scene="countdown"] .brand strong,body[data-scene="ending"] .brand strong{font-size:clamp(14px,1.15vw,23px)}
+body[data-scene="welcome"] .brand span,body[data-scene="starting"] .brand span,body[data-scene="countdown"] .brand span,body[data-scene="ending"] .brand span{font-size:clamp(9px,.69vw,14px)}
 
 .message{
   z-index:4!important;
