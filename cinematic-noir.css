@@ -504,11 +504,11 @@ body[data-scene="live"] .anniversary-badge{
   bottom:6%;
   z-index:7;
   display:grid;
-  width:124px;
+  width:140px;
   aspect-ratio:1;
   place-items:center;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(74,19,126,.72),rgba(8,5,11,.28) 62%,transparent 64%);
+  background:transparent;
   filter:drop-shadow(0 14px 28px rgba(0,0,0,.48));
   animation:badgeEntrance 1.1s .35s cubic-bezier(.16,1,.3,1) both,badgeFloat 4.5s 1.5s ease-in-out infinite;
 }
