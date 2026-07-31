@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Lower-Third Example</title>
+  <style>
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
+    body{display:grid;place-items:center;background:#050308;color:#fff}
+    .stage{position:relative;width:min(100vw,177.78vh);height:min(56.25vw,100vh);overflow:hidden;background:radial-gradient(circle at 70% 25%,#42206d 0,transparent 31%),linear-gradient(135deg,#11131b,#24152d 55%,#09060d)}
+    .stage:before{content:"LIVE CAMERA PREVIEW";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.14);font-size:5vw;font-weight:900;letter-spacing:.08em}
+    .top{position:absolute;inset:0 0 auto;height:5%;display:grid;place-items:center;background:#7425e8;font-size:1vw;font-weight:900;letter-spacing:.12em}
+    .lower{position:absolute;left:5%;bottom:7%;display:grid;grid-template-columns:10px 128px minmax(0,1fr) 210px;align-items:center;width:68%;min-height:132px;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:linear-gradient(100deg,rgba(9,5,15,.98),rgba(31,10,50,.96) 72%,rgba(102,29,203,.95));box-shadow:0 20px 55px rgba(0,0,0,.38);opacity:0;transform:translateX(-90px);transition:opacity .32s ease,transform .55s cubic-bezier(.2,.8,.2,1)}
+    .lower.show{opacity:1;transform:translateX(0)}
+    .accent{align-self:stretch;background:linear-gradient(#ad55ff,#7425e8)}
+    img{width:112px;height:112px;object-fit:contain;margin:10px 8px;filter:drop-shadow(0 0 14px rgba(168,71,245,.35))}
+    .copy{min-width:0;padding:15px 18px}.copy>*{display:block}.copy span{color:#ad55ff;font-size:16px;font-weight:900;letter-spacing:.18em}.copy strong{margin:5px 0;font-size:42px;line-height:1;white-space:nowrap}.copy small{color:#cfc4da;font-size:15px;letter-spacing:.1em}
+    .lower>b{align-self:stretch;display:grid;place-items:center;padding:20px;border-left:1px solid rgba(255,255,255,.18);font-size:18px;letter-spacing:.12em;text-align:center}
+    .note{position:absolute;right:2%;bottom:2%;color:#a698af;font-size:12px;letter-spacing:.08em}
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="top">SUNDAY WORSHIP 10:00 AM — WE BELIEVE GOD</div>
+    <section id="lower" class="lower">
+      <div class="accent"></div>
+      <img src="assets/franklin-lower-third-mark.png" alt="">
+      <div class="copy">
+        <span>SENIOR PASTOR</span>
+        <strong>REV. JOHN T. MORRISON, JR.</strong>
+        <small>FRANKLIN CHAPEL AME ZION CHURCH</small>
+      </div>
+      <b>WE BELIEVE GOD</b>
+    </section>
+    <div class="note">DEMO LOOPS AUTOMATICALLY</div>
+  </main>
+  <script>
+    const lower=document.querySelector("#lower");
+    const cycle=()=>{lower.classList.add("show");setTimeout(()=>lower.classList.remove("show"),7000)};
+    cycle();setInterval(cycle,11000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Cinematic Noir — All Scenes</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#070609;color:#f7f4fa;font-family:Arial,Helvetica,sans-serif}
+    header{max-width:1500px;margin:auto;padding:52px 4% 28px}
+    header span{color:#a94cff;font-size:12px;font-weight:900;letter-spacing:.18em}
+    h1{margin:10px 0 6px;font-size:clamp(34px,5vw,72px);letter-spacing:-.055em}
+    header p{color:#aaa2af}
+    main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px;max-width:1500px;margin:auto;padding:20px 4% 80px}
+    article{min-width:0}
+    .meta{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px}
+    h2{margin:0;font-size:17px;letter-spacing:.04em}
+    a{color:#c992ff;font-size:12px;font-weight:900;letter-spacing:.08em;text-decoration:none}
+    a:hover{color:#fff}
+    .shell{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid #33263d;background:linear-gradient(135deg,#16121b,#08070a);box-shadow:0 18px 55px rgba(0,0,0,.3)}
+    iframe{position:absolute;inset:0;width:1920px;height:1080px;border:0;transform-origin:0 0;pointer-events:none}
+    .live-note{position:absolute;z-index:2;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.18);font-size:clamp(18px,3vw,44px);font-weight:900;letter-spacing:.1em;pointer-events:none}
+    @media(max-width:900px){main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <span>FRANKLIN CHAPEL • CINEMATIC NOIR</span>
+    <h1>Complete scene preview.</h1>
+    <p>Open any scene full-size using the link beside its name.</p>
+  </header>
+  <main id="gallery"></main>
+  <script>
+    const scenes=[
+      ["00 • Welcome","00-welcome.html"],
+      ["01 • Stream Starting Soon","01-starting-soon.html"],
+      ["01B • Five Minute Countdown","11-five-minute-countdown.html"],
+      ["02 • Live Worship","02-live-worship.html",true],
+      ["03 • Scripture","03-scripture.html"],
+      ["04 • Announcements","04-announcements.html"],
+      ["05 • Offering","05-offering.html"],
+      ["06 • Be Right Back","06-be-right-back.html"],
+      ["07 • Service Ending / Farewell","07-service-ending.html"]
+    ];
+    const gallery=document.querySelector("#gallery");
+    scenes.forEach(([name,file,isLive])=>{
+      const card=document.createElement("article");
+      card.innerHTML=`<div class="meta"><h2>${name}</h2><a href="${file}" target="_blank">OPEN FULL SIZE ↗</a></div><div class="shell">${isLive?'<div class="live-note">CAMERA AREA</div>':''}<iframe src="${file}" title="${name}"></iframe></div>`;
+      gallery.append(card);
+    });
+    const resize=()=>{
+      document.querySelectorAll(".shell").forEach(shell=>{
+        shell.querySelector("iframe").style.transform=`scale(${shell.clientWidth/1920})`;
+      });
+    };
+    new ResizeObserver(resize).observe(gallery);
+    resize();
+  </script>
+</body>
+</html>

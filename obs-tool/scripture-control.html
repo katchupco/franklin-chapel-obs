@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Scripture Control</title>
+  <link rel="stylesheet" href="scripture-control.css">
+</head>
+<body>
+  <header>
+    <span>◆</span>
+    <div><strong>FRANKLIN CHAPEL</strong><small>SCRIPTURE CONTROL</small></div>
+    <b id="status">READY</b>
+  </header>
+  <main>
+    <label>Book &amp; verse
+      <input id="reference" value="JOHN 3:16" placeholder="Example: John 3:16">
+    </label>
+    <label>Scripture text
+      <textarea id="text" rows="7" placeholder="Type or paste the scripture text here.">For God so loved the world, that he gave his only begotten Son.</textarea>
+    </label>
+    <button id="update">UPDATE TEXT</button>
+    <div class="on-air-row">
+      <div><strong>CENTER SCRIPTURE</strong><small>SHOW OVER THE LIVE CAMERA</small></div>
+      <label class="toggle">
+        <input id="visible" type="checkbox">
+        <span><i></i></span>
+        <b>OFF</b>
+      </label>
+    </div>
+    <p>Text saves automatically. Update Text also updates the full-screen Scripture scene.</p>
+  </main>
+  <footer>WE BELIEVE GOD</footer>
+  <script src="scripture-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Lower Thirds</title>
+  <link rel="stylesheet" href="controller.css">
+</head>
+<body>
+  <header>
+    <span class="diamond">◆</span>
+    <div><strong>FRANKLIN CHAPEL</strong><small>LOWER-THIRD CONTROL</small></div>
+    <button id="hideAll" class="danger">HIDE ALL</button>
+  </header>
+
+  <main id="presets"></main>
+
+  <template id="presetTemplate">
+    <article class="preset">
+      <div class="preset-head">
+        <b class="number"></b>
+        <input class="label" aria-label="Preset label">
+        <span class="status">READY</span>
+      </div>
+      <label>Kicker<input class="kicker"></label>
+      <label>Primary line<input class="primary"></label>
+      <label>Secondary line<input class="secondary"></label>
+      <div class="actions">
+        <div class="standard-time"><strong>8 SEC ON SCREEN</strong><span>REPEATS EVERY 30 SEC</span></div>
+        <label class="air-toggle">
+          <input class="onair" type="checkbox">
+          <span class="toggle-track"><i></i></span>
+          <b>OFF</b>
+        </label>
+      </div>
+    </article>
+  </template>
+
+  <footer>WE BELIEVE GOD • Six presets save automatically on this computer.</footer>
+  <script src="controller.js"></script>
+</body>
+</html>

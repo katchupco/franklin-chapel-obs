@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Live Package</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cinematic-noir.css">
+</head>
+<body>
+  <main id="scene" class="scene">
+    <div class="broadcast-bg" aria-hidden="true">
+      <i></i><i></i><i></i>
+    </div>
+    <video id="sceneVideo" class="scene-video" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="starting-gallery" aria-hidden="true">
+      <figure><img src="assets/current-scripture.jpg" alt=""></figure>
+      <figure><img src="assets/current-offering.jpg" alt=""></figure>
+      <figure><img src="assets/current-outside.jpg" alt=""></figure>
+      <figure><img src="assets/current-newbigzo.png" alt=""></figure>
+      <figure><img src="assets/current-gallery-fellowship.jpg" alt=""></figure>
+      <figure><img src="assets/current-gallery-sanctuary.jpg" alt=""></figure>
+      <figure><img src="assets/current-gallery-tea.jpg" alt=""></figure>
+    </div>
+    <div class="scene-photo" aria-hidden="true"></div>
+    <div class="wash" aria-hidden="true"></div>
+    <div class="topbar" id="topbar">WE BELIEVE GOD</div>
+
+    <section class="brand">
+      <img class="site-logo" src="assets/franklin-lower-third-mark.png" alt="">
+      <div>
+        <strong>FRANKLIN CHAPEL LIVE</strong>
+        <span>LAURINBURG, NORTH CAROLINA</span>
+      </div>
+    </section>
+
+    <section class="message">
+      <div class="eyebrow" id="eyebrow">WELCOME HOME.</div>
+      <h1 id="headline">WORSHIP<br>BEGINS SOON.</h1>
+      <p id="subhead">WE’RE GLAD YOU’RE HERE.</p>
+    </section>
+
+    <section class="countdown">
+      <span id="countdownLabel">WORSHIP BEGINS IN</span>
+      <strong id="countdownTimer">05:00</strong>
+      <p id="countdownVerse">“THIS IS THE DAY WHICH THE LORD HATH MADE.” — PSALM 118:24</p>
+    </section>
+
+    <section class="live-frame" aria-label="Place live camera source behind this browser source"></section>
+
+    <div class="anniversary-badge" aria-label="Franklin Chapel 150 Years">
+      <img src="assets/franklin-150-years.png" alt="150 Years">
+    </div>
+
+    <section class="lower-third">
+      <div class="speaker">
+        <span>PASTOR / SPEAKER</span>
+        <strong id="speaker">SPEAKER NAME</strong>
+      </div>
+      <div class="sermon">
+        <span>MESSAGE</span>
+        <strong id="title">MESSAGE TITLE</strong>
+      </div>
+      <div class="welcome">WELCOME<br>HOME.</div>
+    </section>
+
+    <section class="lower-third-only">
+      <div class="lt-accent"></div>
+      <img src="assets/franklin-lower-third-mark.png" alt="Franklin Chapel mark">
+      <div class="lt-copy">
+        <span id="lt-kicker">SENIOR PASTOR</span>
+        <strong id="lt-primary">PASTOR / SPEAKER</strong>
+        <small id="lt-secondary">FRANKLIN CHAPEL AME ZION CHURCH</small>
+      </div>
+      <b>WE BELIEVE GOD</b>
+    </section>
+
+    <section class="scripture-card">
+      <span>TODAY’S SCRIPTURE</span>
+      <blockquote id="verse">SCRIPTURE TEXT GOES HERE.</blockquote>
+      <strong id="reference">BOOK 1:1</strong>
+    </section>
+
+    <section class="events" id="events">
+      <article><span>THE GLORY TRAIN &amp; DINNER</span><strong>AUGUST 8 • 6:00 PM</strong><p>FRANKLIN CHAPEL AME ZION</p></article>
+      <article><span>ON THE ROAD W/ PASTOR J</span><strong>AUGUST 10 • 7:00 PM</strong><p>REVIVAL AT MT. GROVE AME ZION</p></article>
+      <article><span>ON THE ROAD W/ PASTOR J</span><strong>AUGUST 13 • 7:30 AM</strong><p>REVIVAL AT SLIVER HILL</p></article>
+    </section>
+
+    <section class="giving-options" aria-label="Ways to give">
+      <article>
+        <div class="giving-qr">
+          <img src="assets/qr-give-website.png" alt="QR code for website giving">
+          <span class="giving-brand brand-website"><img src="assets/franklin-lower-third-mark.png" alt=""></span>
+        </div>
+        <div><span>WEBSITE</span><strong>GIVE ONLINE</strong><p>FRANKLINCHAPEL.ORG/GIVE</p></div>
+      </article>
+      <article>
+        <div class="giving-qr">
+          <img src="assets/qr-give-cashapp.png" alt="QR code for Cash App">
+          <span class="giving-brand brand-cashapp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M7.5 15.4c.9 1.3 2.4 2.1 4.5 2.1 2.5 0 4.2-1.2 4.2-3 0-2-1.9-2.6-4.2-3.1-2-.5-3.7-1-3.7-3 0-1.8 1.6-3 3.9-3 1.8 0 3.1.6 4 1.7" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div><span>CASH APP</span><strong>$FRANKLINCHAPELNC</strong><p>SCAN TO OPEN CASH APP</p></div>
+      </article>
+      <article>
+        <div class="giving-qr">
+          <img src="assets/qr-give-paypal.png" alt="QR code for PayPal">
+          <span class="giving-brand brand-paypal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 19.4 10 4.7h6.2c2.8 0 4.4 1.4 4 3.8-.5 3.1-2.8 4.8-6.3 4.8h-2.4l-1.1 6.1H7.2Z" fill="#003087"/><path d="M4.6 21 7.4 6.3h6.1c2.8 0 4.3 1.4 3.9 3.8-.5 3.1-2.8 4.8-6.3 4.8H8.8L7.7 21H4.6Z" fill="#009cde" opacity=".94"/></svg>
+          </span>
+        </div>
+        <div><span>PAYPAL</span><strong>FRANKLIN CHAPEL</strong><p>PAYPAL.ME/FRANKLINCHAPEL</p></div>
+      </article>
+      <article>
+        <div class="giving-qr">
+          <img src="assets/qr-give-givelify.png" alt="QR code for Givelify">
+          <span class="giving-brand brand-givelify">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10.1C5 7.1 6.9 5 9.3 5c1.3 0 2.2.6 2.7 1.4.5-.8 1.5-1.4 2.8-1.4C17.2 5 19 7.1 19 9.9 19 15.5 12 20 12 20Z" fill="currentColor"/><path d="M14.9 10.3a3.1 3.1 0 1 0-1 3.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div><span>GIVELIFY</span><strong>FRANKLIN CHAPEL</strong><p>SCAN TO GIVE SECURELY</p></div>
+      </article>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const sceneName = params.get("scene") || "starting";
+    document.body.dataset.scene = sceneName;
+
+    const galleryPool = [
+      "assets/current-scripture.jpg",
+      "assets/current-offering.jpg",
+      "assets/current-outside.jpg",
+      "assets/current-newbigzo.png",
+      "assets/current-gallery-fellowship.jpg",
+      "assets/current-gallery-sanctuary.jpg",
+      "assets/current-gallery-tea.jpg",
+      "assets/gallery-IMG_3107.jpg",
+      "assets/gallery-IMG_3112.jpg",
+      "assets/gallery-IMG_3114.jpg",
+      "assets/gallery-IMG_3121.jpg",
+      "assets/gallery-IMG_3124.jpg",
+      "assets/gallery-IMG_3127.jpg",
+      "assets/gallery-IMG_3131.jpg",
+      "assets/gallery-IMG_3134.jpg",
+      "assets/gallery-IMG_3137.jpg",
+      "assets/gallery-IMG_3139.jpg",
+      "assets/gallery-IMG_3140.jpg",
+      "assets/gallery-IMG_3141.jpg"
+    ];
+    if (sceneName === "starting" || sceneName === "countdown") {
+      const shuffled = [...galleryPool];
+      for (let index = shuffled.length - 1; index > 0; index--) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+      }
+      document.querySelector(".starting-gallery").innerHTML = shuffled
+        .slice(0, 7)
+        .map(src => `<figure><img src="${src}" alt=""></figure>`)
+        .join("");
+    }
+
+    const sceneVideos = {
+      welcome: "assets/obs-welcome.mov",
+      announcement: "assets/obs-announcements.mov",
+      brb: "assets/obs-brb.mov"
+    };
+    const sceneVideo = document.getElementById("sceneVideo");
+    if (sceneVideos[sceneName]) {
+      sceneVideo.src = sceneVideos[sceneName];
+      sceneVideo.muted = true;
+      document.body.dataset.media = "video";
+      const startSceneVideo = () => sceneVideo.play().catch(() => {});
+      sceneVideo.addEventListener("canplay", startSceneVideo, {once: true});
+      sceneVideo.addEventListener("error", () => {
+        sceneVideo.hidden = true;
+        document.body.dataset.media = "static";
+      });
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) startSceneVideo();
+      });
+      sceneVideo.load();
+      startSceneVideo();
+    } else {
+      sceneVideo.hidden = true;
+      document.body.dataset.media = "static";
+    }
+
+    const content = {
+      welcome: ["FRANKLIN CHAPEL LIVE", "WELCOME<br>HOME.", "WORSHIP • GROW • SERVE • BELIEVE"],
+      starting: ["FRANKLIN CHAPEL LIVE", "STREAM<br>STARTING SOON.", "SUNDAY WORSHIP • 10:00 AM"],
+      countdown: ["", "", ""],
+      brb: ["FRANKLIN CHAPEL LIVE", "WE’LL BE<br>RIGHT BACK.", "WORSHIP WILL CONTINUE SHORTLY."],
+      ending: ["WE BELIEVE GOD", "THANK YOU FOR<br>WORSHIPING WITH US.", "SEE YOU NEXT SUNDAY • 10:00 AM"],
+      announcement: ["FRANKLIN CHAPEL", "WHAT’S<br>HAPPENING.", "LIFE AT FRANKLIN CHAPEL"],
+      offering: ["GIVE", "THANK YOU FOR<br>YOUR GENEROSITY.", "FRANKLINCHAPEL.ORG/GIVE"],
+      live: ["", "", ""],
+      scripture: ["", "", ""]
+    };
+    const selected = content[sceneName] || content.starting;
+    document.getElementById("eyebrow").textContent = selected[0];
+    document.getElementById("headline").innerHTML = selected[1];
+    document.getElementById("subhead").textContent = selected[2];
+
+    for (const key of ["speaker", "title", "verse", "reference"]) {
+      const value = params.get(key);
+      if (value) document.getElementById(key).textContent = value;
+    }
+    const fitScripture = () => {
+      const verse = document.getElementById("verse");
+      verse.classList.toggle("verse-long", verse.textContent.length > 150);
+      verse.classList.toggle("verse-extra-long", verse.textContent.length > 260);
+    };
+    fitScripture();
+
+    const lowerThirds = {
+      lowerthird: ["SENIOR PASTOR", "PASTOR / SPEAKER", "FRANKLIN CHAPEL AME ZION CHURCH"],
+      sermonlower: ["TODAY’S MESSAGE", "MESSAGE TITLE", "PASTOR / SPEAKER"],
+      scripturelower: ["SCRIPTURE", "BOOK 1:1", "SCRIPTURE TEXT"]
+    };
+    if (lowerThirds[sceneName]) {
+      const values = lowerThirds[sceneName];
+      document.getElementById("lt-kicker").textContent = params.get("kicker") || values[0];
+      document.getElementById("lt-primary").textContent = params.get("primary") || values[1];
+      document.getElementById("lt-secondary").textContent = params.get("secondary") || values[2];
+    }
+
+    if (sceneName === "scripture" && "BroadcastChannel" in window) {
+      const scriptureBus = new BroadcastChannel("franklin-chapel-scripture-v1");
+      scriptureBus.addEventListener("message", event => {
+        if (!["update","show"].includes(event.data?.action)) return;
+        if (event.data.text) document.getElementById("verse").textContent = event.data.text;
+        if (event.data.reference) document.getElementById("reference").textContent = event.data.reference;
+        fitScripture();
+      });
+      scriptureBus.postMessage({action:"requestCurrent",sentAt:Date.now()});
+    }
+
+    if (sceneName === "countdown") {
+      const countdownVerses = [
+        "“THIS IS THE DAY WHICH THE LORD HATH MADE.” — PSALM 118:24",
+        "“BE STILL, AND KNOW THAT I AM GOD.” — PSALM 46:10",
+        "“THE LORD IS MY SHEPHERD; I SHALL NOT WANT.” — PSALM 23:1",
+        "“I CAN DO ALL THINGS THROUGH CHRIST.” — PHILIPPIANS 4:13",
+        "“WE WALK BY FAITH, NOT BY SIGHT.” — 2 CORINTHIANS 5:7",
+        "“O TASTE AND SEE THAT THE LORD IS GOOD.” — PSALM 34:8",
+        "“LET EVERY THING THAT HATH BREATH PRAISE THE LORD.” — PSALM 150:6",
+        "“WITH GOD ALL THINGS ARE POSSIBLE.” — MATTHEW 19:26",
+        "“THE JOY OF THE LORD IS YOUR STRENGTH.” — NEHEMIAH 8:10",
+        "“GOD IS OUR REFUGE AND STRENGTH.” — PSALM 46:1",
+        "“TRUST IN THE LORD WITH ALL THINE HEART.” — PROVERBS 3:5",
+        "“REJOICE IN THE LORD ALWAY.” — PHILIPPIANS 4:4"
+      ];
+      document.getElementById("countdownVerse").textContent =
+        countdownVerses[Math.floor(Math.random() * countdownVerses.length)];
+      const requestedMinutes = Math.max(1, Number(params.get("minutes")) || 5);
+      const finishAt = Date.now() + requestedMinutes * 60 * 1000;
+      const timer = document.getElementById("countdownTimer");
+      const label = document.getElementById("countdownLabel");
+      const updateCountdown = () => {
+        const remaining = Math.max(0, Math.ceil((finishAt - Date.now()) / 1000));
+        const minutes = String(Math.floor(remaining / 60)).padStart(2, "0");
+        const seconds = String(remaining % 60).padStart(2, "0");
+        timer.textContent = `${minutes}:${seconds}`;
+        if (remaining === 0) {
+          label.textContent = "WORSHIP BEGINS NOW";
+          clearInterval(countdownInterval);
+        }
+      };
+      updateCountdown();
+      const countdownInterval = setInterval(updateCountdown, 250);
+    }
+
+    const eventFeed = "https://franklinchapel.org/wp-json/tribe/events/v1/events";
+    const decodeText = (value = "") => {
+      const el = document.createElement("textarea");
+      el.innerHTML = value;
+      return el.value.replace(/<[^>]*>/g, "").trim();
+    };
+    const formatEventDate = event => {
+      const date = new Date(event.start_date.replace(" ", "T"));
+      const day = new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        day: "numeric"
+      }).format(date).toUpperCase();
+      if (event.all_day) return day;
+      const time = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "2-digit"
+      }).format(date).toUpperCase();
+      return `${day} • ${time}`;
+    };
+    const refreshEvents = async () => {
+      if (sceneName !== "announcement") return;
+      try {
+        const today = new Date().toISOString().slice(0, 10);
+        const url = `${eventFeed}?per_page=3&start_date=${encodeURIComponent(`${today} 00:00:00`)}`;
+        const response = await fetch(url, {cache: "no-store"});
+        if (!response.ok) throw new Error("Event feed unavailable");
+        const data = await response.json();
+        if (!data.events?.length) return;
+        document.getElementById("events").innerHTML = data.events.slice(0, 3).map(event => {
+          const venue = decodeText(event.venue?.venue || "FRANKLIN CHAPEL AME ZION");
+          return `<article><span>${decodeText(event.title)}</span><strong>${formatEventDate(event)}</strong><p>${venue}</p></article>`;
+        }).join("");
+      } catch (error) {
+        console.info("Using the built-in event fallback.");
+      }
+    };
+    refreshEvents();
+    setInterval(refreshEvents, 15 * 60 * 1000);
+  </script>
+</body>
+</html>
