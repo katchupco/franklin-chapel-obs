@@ -187,8 +187,8 @@ body[data-scene="announcement"] .scene-photo{
   background-position:center;
 }
 body[data-scene="offering"] .scene-photo{
-  background-image:url("assets/current-offering.jpg");
-  background-position:center 48%;
+  background-image:url("assets/scene-offering.jpg");
+  background-position:center 36%;
 }
 body[data-scene="brb"] .scene-photo{
   background-image:url("assets/current-scripture.jpg");
@@ -216,12 +216,13 @@ body[data-scene="ending"] .scene-photo::after{
 
 body[data-scene="scripture"] .scripture-card{
   z-index:4;
-  top:24%;
+  top:36%;
   left:8%;
-  width:58%;
+  width:64%;
   animation:copyReveal .9s .25s cubic-bezier(.2,.8,.2,1) both;
 }
-.scripture-card span{font-size:clamp(11px,.95vw,19px)}
+.scripture-card span{font-size:clamp(14px,1.15vw,23px);letter-spacing:.2em}
+body[data-scene="scripture"] .scripture-card blockquote{display:none}
 .scripture-card blockquote{
   font-size:clamp(58px,7vw,142px);
   line-height:.86;
@@ -236,9 +237,13 @@ body[data-scene="scripture"] .scripture-card{
 }
 .scripture-card strong{
   display:inline-block;
-  padding-top:14px;
-  border-top:1px solid rgba(255,255,255,.28);
-  font-size:clamp(24px,2.5vw,50px);
+  margin-top:20px;
+  padding:18px 34px 22px 0;
+  border-top:2px solid rgba(173,85,255,.72);
+  font-size:clamp(62px,7.3vw,148px);
+  line-height:.9;
+  letter-spacing:-.055em;
+  text-shadow:0 0 28px rgba(116,37,232,.32);
 }
 
 body[data-scene="announcement"] .message{
