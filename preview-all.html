@@ -49,7 +49,8 @@
     const gallery=document.querySelector("#gallery");
     scenes.forEach(([name,file,isLive])=>{
       const card=document.createElement("article");
-      card.innerHTML=`<div class="meta"><h2>${name}</h2><a href="${file}" target="_blank">OPEN FULL SIZE ↗</a></div><div class="shell">${isLive?'<div class="live-note">CAMERA AREA</div>':''}<iframe src="${file}" title="${name}"></iframe></div>`;
+        const versionedFile=`${file}?v=50fb0a0`;
+        card.innerHTML=`<div class="meta"><h2>${name}</h2><a href="${versionedFile}" target="_blank">OPEN FULL SIZE ↗</a></div><div class="shell">${isLive?'<div class="live-note">CAMERA AREA</div>':''}<iframe src="${versionedFile}" title="${name}"></iframe></div>`;
       gallery.append(card);
     });
     const resize=()=>{
