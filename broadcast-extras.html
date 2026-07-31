@@ -23,11 +23,12 @@
 
     <section class="sermon-layout">
       <div class="camera-window"><span>MAIN CAMERA</span></div>
-      <aside>
-        <small>TODAY’S MESSAGE</small>
+      <aside id="sermonCard">
+        <div class="sermon-card-brand"><img src="assets/franklin-lower-third-mark.png" alt=""><span>FRANKLIN CHAPEL LIVE</span></div>
+        <small id="messageKicker">TODAY’S MESSAGE</small>
         <h1 id="messageTitle">MESSAGE TITLE</h1>
         <p id="messageSpeaker">PASTOR / SPEAKER</p>
-        <div><span>SCRIPTURE</span><strong id="messageScripture">BOOK 1:1</strong></div>
+        <div class="sermon-scripture"><span>SCRIPTURE</span><strong id="messageScripture">BOOK 1:1</strong></div>
       </aside>
     </section>
 
@@ -48,6 +49,7 @@
     const selected = params.get("layout") || "transition";
     document.body.dataset.layout = selected;
     const values = {
+      messageKicker: params.get("kicker"),
       messageTitle: params.get("title"),
       messageSpeaker: params.get("speaker"),
       messageScripture: params.get("scripture"),
@@ -57,6 +59,39 @@
     };
     for (const [id,value] of Object.entries(values)) {
       if (value) document.getElementById(id).textContent = value;
+    }
+
+    if (selected === "sermon") {
+      const channel = new BroadcastChannel("franklin-chapel-sermon-scene-v1");
+      const storageKey = "franklin-chapel-sermon-scene-command-v1";
+      const card = document.querySelector("#sermonCard");
+      const applySermon = command => {
+        if (!command) return;
+        if (command.action === "hide") {
+          card.classList.add("hidden");
+          return;
+        }
+        if (command.action !== "show" && command.action !== "update") return;
+        const map = {
+          messageKicker: command.kicker,
+          messageTitle: command.title,
+          messageSpeaker: command.speaker,
+          messageScripture: command.scripture
+        };
+        for (const [id,value] of Object.entries(map)) {
+          if (value) document.getElementById(id).textContent = value;
+        }
+        card.classList.remove("hidden","refresh");
+        void card.offsetWidth;
+        card.classList.add("refresh");
+      };
+      channel.addEventListener("message", event => applySermon(event.data));
+      addEventListener("storage", event => {
+        if (event.key === storageKey && event.newValue) {
+          try { applySermon(JSON.parse(event.newValue)); } catch {}
+        }
+      });
+      try { applySermon(JSON.parse(localStorage.getItem(storageKey))); } catch {}
     }
   </script>
 </body>

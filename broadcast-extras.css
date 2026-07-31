@@ -31,16 +31,26 @@ body[data-layout="sermon"] .sermon-layout{position:absolute;inset:132px 40px 42p
   font-size:10px;font-weight:900;letter-spacing:.13em
 }
 .sermon-layout aside{
-  display:flex;flex-direction:column;justify-content:center;padding:42px;border:1px solid rgba(255,255,255,.2);
-  background:linear-gradient(145deg,rgba(8,5,13,.96),rgba(38,13,57,.95) 68%,rgba(104,27,165,.93))
+  position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:42px;border:1px solid rgba(255,255,255,.2);
+  background:linear-gradient(145deg,rgba(8,5,13,.97),rgba(35,12,53,.96) 66%,rgba(111,29,178,.94));
+  box-shadow:0 24px 60px rgba(0,0,0,.32);transform-origin:right center;
+  animation:sermonCardIn .8s .22s cubic-bezier(.16,1,.3,1) both;
+  transition:opacity .35s ease,transform .55s cubic-bezier(.2,.8,.2,1)
 }
+.sermon-layout aside::after{content:"";position:absolute;right:-32%;bottom:-35%;width:90%;aspect-ratio:1;border:1px solid rgba(255,255,255,.11);border-radius:50%;box-shadow:0 0 0 28px rgba(173,85,255,.035),0 0 0 62px rgba(173,85,255,.025);animation:sermonOrbit 12s linear infinite}
+.sermon-layout aside>*{position:relative;z-index:2}
+.sermon-layout aside.hidden{opacity:0;transform:translateX(110%)}
+.sermon-layout aside.refresh{animation:sermonRefresh .62s cubic-bezier(.16,1,.3,1)}
+.sermon-card-brand{display:flex;align-items:center;gap:12px;margin-bottom:34px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18)}
+.sermon-card-brand img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 0 9px rgba(173,85,255,.55))}
+.sermon-card-brand span{font-size:11px;font-weight:900;letter-spacing:.16em}
 .sermon-layout aside small{color:var(--violet);font-size:13px;font-weight:900;letter-spacing:.19em}
 .sermon-layout aside h1{margin:18px 0 15px;font-size:clamp(38px,4vw,76px);line-height:.9;letter-spacing:-.055em}
 .sermon-layout aside p{margin:0;color:#d2c5d9;font-size:15px;font-weight:800;letter-spacing:.08em}
-.sermon-layout aside div{margin-top:42px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
-.sermon-layout aside div span,.sermon-layout aside div strong{display:block}
-.sermon-layout aside div span{color:var(--violet);font-size:10px;font-weight:900;letter-spacing:.15em}
-.sermon-layout aside div strong{margin-top:8px;font-size:26px}
+.sermon-layout aside .sermon-scripture{margin-top:42px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
+.sermon-layout aside .sermon-scripture span,.sermon-layout aside .sermon-scripture strong{display:block}
+.sermon-layout aside .sermon-scripture span{color:var(--violet);font-size:10px;font-weight:900;letter-spacing:.15em}
+.sermon-layout aside .sermon-scripture strong{margin-top:8px;font-size:26px}
 
 body[data-layout="pip"] .pip-layout{position:absolute;inset:132px 40px 42px;display:block}
 .pip-layout .main-camera{position:absolute;inset:0}
@@ -61,4 +71,7 @@ body[data-layout="transition"] .transition-copy{position:absolute;z-index:4;inse
 .transition-copy strong{margin-top:8px;font-size:58px;letter-spacing:.04em}
 @keyframes sweep{0%{transform:translateX(-125%) skewX(-8deg)}70%,100%{transform:translateX(120%) skewX(-8deg)}}
 @keyframes markIn{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+@keyframes sermonCardIn{from{opacity:0;transform:translateX(105%) scale(.96)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes sermonRefresh{0%{opacity:.55;transform:translateX(24px)}100%{opacity:1;transform:translateX(0)}}
+@keyframes sermonOrbit{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
