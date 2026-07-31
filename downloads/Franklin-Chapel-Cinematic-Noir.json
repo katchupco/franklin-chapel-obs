@@ -1,0 +1,477 @@
+{
+  "name": "Franklin Chapel • GitHub Hosted",
+  "current_scene": "00 • Welcome",
+  "current_program_scene": "00 • Welcome",
+  "current_transition": "Fade",
+  "transition_duration": 500,
+  "preview_locked": false,
+  "scaling_enabled": false,
+  "scene_order": [
+    {"name": "00 • Welcome"},
+    {"name": "01 • Starting Soon"},
+    {"name": "01B • 5 Minute Countdown"},
+    {"name": "02 • Live Worship"},
+    {"name": "02A • Sermon + Presentation"},
+    {"name": "02B • Picture in Picture"},
+    {"name": "02C • Split Screen Guest"},
+    {"name": "03 • Scripture"},
+    {"name": "04 • Announcements"},
+    {"name": "04A • Camera Announcements"},
+    {"name": "04B • Custom Event Video"},
+    {"name": "05 • Offering"},
+    {"name": "06 • Be Right Back"},
+    {"name": "07 • Service Ending"},
+    {"name": "T • Branded Transition"}
+  ],
+  "quick_transitions": [
+    {"duration": 300, "hotkeys": [], "id": 1, "name": "Cut"},
+    {"duration": 500, "hotkeys": [], "id": 2, "name": "Fade"}
+  ],
+  "transitions": [],
+  "saved_projectors": [],
+  "groups": [],
+  "modules": {
+    "scripts-tool": []
+  },
+  "sources": [
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Welcome",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/00-welcome.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Starting Soon",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/01-starting-soon.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • 5 Minute Countdown",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/11-five-minute-countdown.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Live Frame",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/02-live-worship.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": false
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Controlled Lower Third",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/obs-tool/on-air-overlay.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": false
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Center Scripture Overlay",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/obs-tool/scripture-overlay.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": false
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Scripture",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/03-scripture.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Announcements",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/04-announcements.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Camera Announcements Overlay",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/04a-camera-announcements.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "ffmpeg_source",
+      "versioned_id": "ffmpeg_source",
+      "name": "FC • Custom Event Video",
+      "settings": {
+        "is_local_file": true,
+        "local_file": "SELECT THE INCLUDED EVENT VIDEO FILE IN OBS",
+        "looping": false,
+        "restart_on_activate": true,
+        "close_when_inactive": true,
+        "clear_on_media_end": false,
+        "hw_decode": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Offering",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/05-offering.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Be Right Back",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/06-be-right-back.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Service Ending",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/07-service-ending.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Branded Transition",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/12-branded-transition.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": true,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Sermon Presentation Layout",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/13-sermon-presentation.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Picture in Picture Layout",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/14-picture-in-picture.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Split Screen Layout",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/15-split-screen.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": false,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "00 • Welcome",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 1,
+        "items": [
+          {"name": "FC • Welcome", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+        ]
+      }
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "01 • Starting Soon",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 1,
+        "items": [
+          {"name": "FC • Starting Soon", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+        ]
+      }
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "01B • 5 Minute Countdown",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 1,
+        "items": [
+          {"name": "FC • 5 Minute Countdown", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+        ]
+      }
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "02 • Live Worship",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 3,
+        "items": [
+          {"name": "FC • Live Frame", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+          {"name": "FC • Controlled Lower Third", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+          {"name": "FC • Center Scripture Overlay", "id": 3, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+        ]
+      }
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "02A • Sermon + Presentation",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Sermon Presentation Layout", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "02B • Picture in Picture",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Picture in Picture Layout", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "02C • Split Screen Guest",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Split Screen Layout", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "03 • Scripture",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Scripture", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "04 • Announcements",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Announcements", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "04A • Camera Announcements",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Camera Announcements Overlay", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "04B • Custom Event Video",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Custom Event Video", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 2, "bounds_align": 0, "bounds": {"x": 1920.0, "y": 1080.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "05 • Offering",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Offering", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "06 • Be Right Back",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Be Right Back", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "07 • Service Ending",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Service Ending", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "T • Branded Transition",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Branded Transition", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    }
+  ]
+}
