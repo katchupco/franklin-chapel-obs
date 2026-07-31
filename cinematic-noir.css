@@ -187,8 +187,8 @@ body[data-scene="announcement"] .scene-photo{
   background-position:center;
 }
 body[data-scene="offering"] .scene-photo{
-  background-image:url("assets/offering-big-z-2026.png");
-  background-position:center 44%;
+  background-image:url("assets/offering-real-2026.jpg");
+  background-position:center 42%;
 }
 body[data-scene="brb"] .scene-photo{
   background-image:url("assets/current-scripture.jpg");
