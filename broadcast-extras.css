@@ -47,10 +47,6 @@ body[data-layout="sermon"] .sermon-layout{position:absolute;inset:132px 40px 42p
 .sermon-layout aside small{color:var(--violet);font-size:13px;font-weight:900;letter-spacing:.19em}
 .sermon-layout aside h1{margin:18px 0 15px;font-size:clamp(38px,4vw,76px);line-height:.9;letter-spacing:-.055em}
 .sermon-layout aside p{margin:0;color:#d2c5d9;font-size:15px;font-weight:800;letter-spacing:.08em}
-.sermon-layout aside .sermon-scripture{margin-top:42px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
-.sermon-layout aside .sermon-scripture span,.sermon-layout aside .sermon-scripture strong{display:block}
-.sermon-layout aside .sermon-scripture span{color:var(--violet);font-size:10px;font-weight:900;letter-spacing:.15em}
-.sermon-layout aside .sermon-scripture strong{margin-top:8px;font-size:26px}
 
 body[data-layout="pip"] .pip-layout{position:absolute;inset:132px 40px 42px;display:block}
 .pip-layout .main-camera{position:absolute;inset:0}
