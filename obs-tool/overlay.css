@@ -45,5 +45,5 @@ img { width:112px; height:112px; object-fit:contain; margin:10px 8px; filter:dro
 .belief-stack{position:relative;overflow:hidden;text-transform:uppercase}
 .belief-stack span,.belief-stack strong,.belief-stack em{position:relative;z-index:1;display:block;width:100%;font-style:normal;font-weight:950;line-height:.72;letter-spacing:-.055em}
 .belief-stack span{padding-right:8px;color:#ad62ff;font-size:32px;text-align:right;text-shadow:0 0 15px rgba(173,85,255,.55)}
-.belief-stack strong{margin:8px 0 6px;color:#fff;font-size:31px;text-align:right;background:linear-gradient(180deg,#fff 0%,#fff 42%,#c9c6ce 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 7px rgba(0,0,0,.3))}
+.belief-stack strong{margin:8px 0 6px;color:#fff;font-size:31px;text-align:right;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.96) 42%,rgba(255,255,255,.48) 76%,rgba(210,186,231,.72) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 7px rgba(0,0,0,.3))}
 .belief-stack em{padding-right:7px;color:transparent;font-size:43px;text-align:right;-webkit-text-stroke:1.5px rgba(255,255,255,.92);filter:drop-shadow(0 0 7px rgba(192,112,255,.42))}
