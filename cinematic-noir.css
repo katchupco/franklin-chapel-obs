@@ -530,12 +530,13 @@ body[data-scene="live"] .wash{
 }
 body[data-scene="live"] .topbar{
   display:grid;
+  inset:3.5% 3.5% auto auto;
   padding:15px 22px;
   font-size:clamp(12px,.95vw,19px);
 }
 body[data-scene="live"] .brand{
-  top:6%;
-  left:5%;
+  top:3.5%;
+  left:3.5%;
   gap:0;
 }
 body[data-scene="live"] .site-logo{display:none}
