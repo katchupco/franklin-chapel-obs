@@ -57,5 +57,10 @@ window.addEventListener("storage", event => {
     try { handleCommand(JSON.parse(event.newValue)); } catch {}
   }
 });
-readSavedCommand();
-setInterval(readSavedCommand, 500);
+const previewMode = new URLSearchParams(location.search).get("preview") === "1";
+if (previewMode) {
+  panel.classList.add("show");
+} else {
+  readSavedCommand();
+  setInterval(readSavedCommand, 500);
+}
