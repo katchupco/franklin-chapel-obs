@@ -42,3 +42,10 @@ img { width:112px; height:112px; object-fit:contain; margin:10px 8px; filter:dro
   letter-spacing:.12em;
   text-align:center;
 }
+.belief-stack{position:relative;overflow:hidden;text-transform:uppercase}
+.belief-stack::before{content:"";position:absolute;inset:-30% -50%;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.14) 50%,transparent 58%);animation:beliefSheen 4.8s ease-in-out infinite}
+.belief-stack span,.belief-stack strong,.belief-stack em{position:relative;z-index:1;display:block;width:100%;font-style:normal;font-weight:950;line-height:.72;letter-spacing:-.055em}
+.belief-stack span{padding-right:8px;color:#ad62ff;font-size:32px;text-align:right;text-shadow:0 0 15px rgba(173,85,255,.55)}
+.belief-stack strong{margin:8px 0 6px;color:#fff;font-size:31px;background:linear-gradient(180deg,#fff 10%,#d9d6dd 55%,#fff 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 12px rgba(0,0,0,.32)}
+.belief-stack em{padding-left:9px;color:transparent;font-size:43px;text-align:left;-webkit-text-stroke:1.5px rgba(255,255,255,.92);filter:drop-shadow(0 0 7px rgba(192,112,255,.42))}
+@keyframes beliefSheen{0%,62%{transform:translateX(-55%)}88%,100%{transform:translateX(55%)}}
