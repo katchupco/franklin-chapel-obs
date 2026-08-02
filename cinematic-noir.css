@@ -549,11 +549,11 @@ body[data-scene="live"] .live-frame{
 .anniversary-badge{display:none}
 body[data-scene="live"] .anniversary-badge{
   position:absolute;
-  right:5.25%;
-  bottom:6%;
+  right:3.6%;
+  bottom:4.2%;
   z-index:7;
   display:grid;
-  width:140px;
+  width:154px;
   aspect-ratio:1;
   place-items:center;
   border-radius:50%;
