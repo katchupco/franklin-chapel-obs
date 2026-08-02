@@ -567,32 +567,29 @@ body[data-scene="live"] .anniversary-badge::after{
   content:"";
   position:absolute;
   inset:-8px -15px;
-  z-index:0;
-  border:3px solid transparent;
+  border:2px solid transparent;
   border-top-color:rgba(190,112,255,.95);
-  border-right-color:rgba(255,255,255,.62);
+  border-right-color:rgba(255,255,255,.76);
   border-radius:50%;
   filter:drop-shadow(0 0 6px rgba(181,95,255,.5));
   animation:orbitOne 7s linear infinite;
 }
 body[data-scene="live"] .anniversary-badge::after{
   inset:-17px -7px;
-  border-width:2px;
+  border-width:1px;
   border-top-color:rgba(222,190,255,.72);
   border-right-color:transparent;
   border-bottom-color:rgba(147,57,238,.9);
   filter:drop-shadow(0 0 7px rgba(126,42,220,.48));
-  animation:orbitTwo 13s linear infinite;
+  animation:orbitTwo 11s linear infinite;
 }
-body[data-scene="live"] .badge-orbit{position:absolute;z-index:0;inset:-23px -11px;border:2px solid transparent;border-right-color:rgba(255,255,255,.42);border-bottom-color:rgba(191,104,255,.82);border-radius:50%;filter:drop-shadow(0 0 5px rgba(170,78,247,.42));animation:orbitThree 16s linear infinite}
-body[data-scene="live"] .badge-spark{position:absolute;z-index:3;inset:-19px;border-radius:50%;animation:haloSpin 8.5s linear infinite}
-body[data-scene="live"] .badge-spark::after{content:"";position:absolute;top:-4px;left:50%;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 7px #fff,0 0 15px #c46fff,0 0 25px #812de3;transform:translateX(-50%)}
+body[data-scene="live"] .badge-orbit{position:absolute;inset:-23px -11px;border:1px solid transparent;border-right-color:rgba(255,255,255,.48);border-bottom-color:rgba(191,104,255,.78);border-radius:50%;filter:drop-shadow(0 0 5px rgba(170,78,247,.42));animation:orbitThree 16s linear infinite}
+body[data-scene="live"] .badge-spark{position:absolute;inset:-19px;border-radius:50%;animation:haloSpin 8.5s linear infinite}
+body[data-scene="live"] .badge-spark::after{content:"";position:absolute;top:-3px;left:50%;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 6px #fff,0 0 13px #c46fff,0 0 23px #812de3;transform:translateX(-50%)}
 body[data-scene="live"] .anniversary-badge.show-church-mark{filter:brightness(1.18) drop-shadow(0 14px 28px rgba(0,0,0,.48)) drop-shadow(0 0 13px rgba(158,65,239,.32))}
-body[data-scene="live"] .badge-face{position:absolute;z-index:2;inset:0;display:block;overflow:visible;background:transparent}
-body[data-scene="live"] .badge-face::before{content:"";position:absolute;z-index:0;inset:9%;border-radius:50%;background:radial-gradient(circle,rgba(4,3,6,.34),rgba(15,7,20,.16) 50%,transparent 72%);filter:blur(7px)}
+body[data-scene="live"] .badge-face{position:absolute;inset:0;display:block;overflow:visible;background:transparent}
 body[data-scene="live"] .anniversary-badge img{
   position:absolute;
-  z-index:1;
   inset:5%;
   width:90%;
   height:90%;
