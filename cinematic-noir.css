@@ -536,8 +536,9 @@ body[data-scene="live"] .topbar{
 body[data-scene="live"] .brand{
   top:6%;
   left:5%;
+  gap:0;
 }
-body[data-scene="live"] .site-logo{width:85px;height:85px}
+body[data-scene="live"] .site-logo{display:none}
 body[data-scene="live"] .brand strong{font-size:clamp(14px,1.15vw,23px)}
 body[data-scene="live"] .brand span{font-size:clamp(9px,.69vw,14px)}
 body[data-scene="live"] .live-frame{
@@ -591,9 +592,9 @@ body[data-scene="live"] .anniversary-badge img{
   transition:opacity .75s ease,transform .85s cubic-bezier(.16,1,.3,1),filter .75s ease;
 }
 body[data-scene="live"] .badge-150{opacity:1;transform:translateX(0) rotate(0) scale(1)}
-body[data-scene="live"] .badge-church{inset:auto;top:8%;left:-12.5%;width:125%;height:auto;opacity:0;transform:translateX(-75px) rotate(-18deg) scale(.78);filter:brightness(1.42) drop-shadow(0 0 6px rgba(255,255,255,.95)) drop-shadow(0 0 16px rgba(181,95,255,.98)) drop-shadow(0 0 28px rgba(116,37,232,.85))}
+body[data-scene="live"] .badge-church{inset:auto;top:2%;left:-22.5%;width:145%;height:auto;opacity:0;transform:translateX(-75px) rotate(-18deg) scale(.82);filter:brightness(1.42) drop-shadow(0 0 6px rgba(255,255,255,.95)) drop-shadow(0 0 16px rgba(181,95,255,.98)) drop-shadow(0 0 28px rgba(116,37,232,.85))}
 body[data-scene="live"] .anniversary-badge.show-church-mark .badge-150{opacity:0;transform:translateX(75px) rotate(18deg) scale(.68)}
-body[data-scene="live"] .anniversary-badge.show-church-mark .badge-church{opacity:1;transform:translateX(0) rotate(0) scale(1.12)}
+body[data-scene="live"] .anniversary-badge.show-church-mark .badge-church{opacity:1;transform:translateX(0) rotate(0) scale(1.18)}
 
 body[data-scene="lowerthird"] .wash,
 body[data-scene="sermonlower"] .wash,
