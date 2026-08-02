@@ -1,0 +1,43 @@
+FRANKLIN CHAPEL OBS DOCK LINKS
+==============================
+
+Add docks in OBS using:
+Docks > Custom Browser Docks
+
+
+LOWER-THIRD CONTROL DOCK
+Name: Franklin Chapel Lower Thirds
+https://katchupco.github.io/franklin-chapel-obs/obs-tool/control-panel.html
+
+
+SCRIPTURE CONTROL DOCK
+Name: Franklin Chapel Scripture
+https://katchupco.github.io/franklin-chapel-obs/obs-tool/scripture-control.html
+
+
+CELEBRATION OF LIFE CONTROL DOCK
+Name: Celebration of Life Control
+https://katchupco.github.io/franklin-chapel-obs/obs-tool/memorial-control.html
+
+
+ON-SCREEN BROWSER SOURCE LINKS
+==============================
+
+Add these in OBS as Browser Sources at 1920 x 1080.
+
+LOWER-THIRD DISPLAY
+https://katchupco.github.io/franklin-chapel-obs/obs-tool/on-air-overlay.html
+
+
+SCRIPTURE DISPLAY
+https://katchupco.github.io/franklin-chapel-obs/obs-tool/scripture-overlay.html
+
+
+PREVIEW LINKS
+=============
+
+Complete Worship Scene Preview
+https://katchupco.github.io/franklin-chapel-obs/preview-all.html
+
+Celebration of Life Preview
+https://katchupco.github.io/franklin-chapel-obs/preview-memorial.html

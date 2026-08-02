@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Franklin Chapel Live Package</title>
   <link rel="stylesheet" href="styles.css?v=first-family-2026-1">
-  <link rel="stylesheet" href="cinematic-noir.css?v=farewell-hearts-3">
+  <link rel="stylesheet" href="cinematic-noir.css?v=events-rotation-1">
 </head>
 <body>
   <main id="scene" class="scene">
@@ -332,16 +332,41 @@
       }).format(date).toUpperCase();
       return `${day} • ${time}`;
     };
+    let eventRotationTimer;
+    const eventMarkup = (event, index, total) => {
+      const venue = decodeText(event.venue?.venue || "FRANKLIN CHAPEL AME ZION");
+      const image = event.image?.sizes?.medium_large?.url || event.image?.sizes?.medium?.url || event.image?.url || "";
+      return `<article class="camera-event${index === 0 ? " active" : ""}">
+        ${image ? `<figure><img src="${image}" alt=""></figure>` : ""}
+        <div class="event-copy"><small>UPCOMING EVENT • ${index + 1} OF ${total}</small><span>${decodeText(event.title)}</span><strong>${formatEventDate(event)}</strong><p>${venue}</p></div>
+      </article>`;
+    };
     const refreshEvents = async () => {
       if (sceneName !== "announcement") return;
       try {
         const today = new Date().toISOString().slice(0, 10);
-        const url = `${eventFeed}?per_page=3&start_date=${encodeURIComponent(`${today} 00:00:00`)}`;
+        const cameraLayout = document.body.dataset.layout === "camera";
+        const url = `${eventFeed}?per_page=${cameraLayout ? 50 : 3}&start_date=${encodeURIComponent(`${today} 00:00:00`)}`;
         const response = await fetch(url, {cache: "no-store"});
         if (!response.ok) throw new Error("Event feed unavailable");
         const data = await response.json();
         if (!data.events?.length) return;
-        document.getElementById("events").innerHTML = data.events.slice(0, 3).map(event => {
+        const eventRoot = document.getElementById("events");
+        clearInterval(eventRotationTimer);
+        if (cameraLayout) {
+          const currentEvents = data.events.filter(event => new Date((event.end_date || event.start_date).replace(" ", "T")) >= new Date());
+          const events = currentEvents.length ? currentEvents : data.events;
+          eventRoot.innerHTML = events.map(eventMarkup).join("");
+          let activeEvent = 0;
+          if (events.length > 1) eventRotationTimer = setInterval(() => {
+            const cards = eventRoot.querySelectorAll(".camera-event");
+            cards[activeEvent]?.classList.remove("active");
+            activeEvent = (activeEvent + 1) % cards.length;
+            cards[activeEvent]?.classList.add("active");
+          }, 8000);
+          return;
+        }
+        eventRoot.innerHTML = data.events.slice(0, 3).map(event => {
           const venue = decodeText(event.venue?.venue || "FRANKLIN CHAPEL AME ZION");
           return `<article><span>${decodeText(event.title)}</span><strong>${formatEventDate(event)}</strong><p>${venue}</p></article>`;
         }).join("");
