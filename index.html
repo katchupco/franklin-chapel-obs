@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Franklin Chapel Live Package</title>
   <link rel="stylesheet" href="styles.css?v=first-family-2026-1">
-  <link rel="stylesheet" href="cinematic-noir.css?v=farewell-hearts-premium-2">
+  <link rel="stylesheet" href="cinematic-noir.css?v=live-neon-swap-1">
 </head>
 <body>
   <main id="scene" class="scene">
@@ -61,7 +61,8 @@
     <section class="live-frame" aria-label="Place live camera source behind this browser source"></section>
 
     <div class="anniversary-badge" aria-label="Franklin Chapel 150 Years">
-      <img src="assets/franklin-150-years-white-glow.png" alt="150 Years">
+      <img class="badge-150" src="assets/franklin-150-years-white-glow.png" alt="150 Years">
+      <img class="badge-church" src="assets/franklin-lower-third-mark.png" alt="Franklin Chapel">
     </div>
 
     <section class="lower-third">
@@ -265,6 +266,18 @@
       document.getElementById("lt-kicker").textContent = params.get("kicker") || values[0];
       document.getElementById("lt-primary").textContent = params.get("primary") || values[1];
       document.getElementById("lt-secondary").textContent = params.get("secondary") || values[2];
+    }
+
+    if (sceneName === "live" && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const badge = document.querySelector(".anniversary-badge");
+      const scheduleBadgeSwap = () => setTimeout(() => {
+        badge.classList.add("show-church-mark");
+        setTimeout(() => {
+          badge.classList.remove("show-church-mark");
+          scheduleBadgeSwap();
+        }, 4500 + Math.random() * 2500);
+      }, 10000 + Math.random() * 11000);
+      scheduleBadgeSwap();
     }
 
     if (sceneName === "scripture" && "BroadcastChannel" in window) {
