@@ -43,7 +43,7 @@ img { width:112px; height:112px; object-fit:contain; margin:10px 8px; filter:dro
   text-align:center;
 }
 .belief-stack{position:relative;right:0;width:210px;overflow:hidden;text-transform:uppercase}
-.belief-words{display:block;width:100%;font-style:normal;-webkit-mask-image:linear-gradient(135deg,#000 0%,#000 42%,rgba(0,0,0,.68) 72%,rgba(0,0,0,.28) 100%);mask-image:linear-gradient(135deg,#000 0%,#000 42%,rgba(0,0,0,.68) 72%,rgba(0,0,0,.28) 100%)}
+.belief-words{display:block;width:100%;font-style:normal;-webkit-mask-image:linear-gradient(135deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.96) 18%,rgba(0,0,0,.86) 38%,rgba(0,0,0,.72) 58%,rgba(0,0,0,.57) 74%,rgba(0,0,0,.42) 88%,rgba(0,0,0,.3) 100%);mask-image:linear-gradient(135deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.96) 18%,rgba(0,0,0,.86) 38%,rgba(0,0,0,.72) 58%,rgba(0,0,0,.57) 74%,rgba(0,0,0,.42) 88%,rgba(0,0,0,.3) 100%)}
 .belief-stack span,.belief-stack strong,.belief-stack em{position:relative;z-index:1;display:block;width:100%;font-style:normal;font-weight:950;line-height:.67;letter-spacing:-.065em;text-align:right;transform:skewX(-7deg);transform-origin:right center}
 .belief-stack span{right:14px;color:#ad62ff;font-size:37px;text-shadow:0 0 15px rgba(173,85,255,.55)}
 .belief-stack strong{right:11px;margin:7px 0 5px;color:#fff;font-size:36px;filter:drop-shadow(0 4px 7px rgba(0,0,0,.3))}
