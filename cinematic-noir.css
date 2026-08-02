@@ -549,8 +549,8 @@ body[data-scene="live"] .live-frame{
 .anniversary-badge{display:none}
 body[data-scene="live"] .anniversary-badge{
   position:absolute;
-  right:3.6%;
-  bottom:4.2%;
+  right:2%;
+  bottom:2.2%;
   z-index:7;
   display:grid;
   width:154px;
