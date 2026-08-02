@@ -42,9 +42,9 @@ img { width:112px; height:112px; object-fit:contain; margin:10px 8px; filter:dro
   letter-spacing:.12em;
   text-align:center;
 }
-.belief-stack{position:relative;right:0;width:210px;overflow:hidden;text-transform:uppercase}
-.belief-words{display:block;width:100%;font-style:normal;-webkit-mask-image:linear-gradient(135deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.96) 18%,rgba(0,0,0,.86) 38%,rgba(0,0,0,.72) 58%,rgba(0,0,0,.57) 74%,rgba(0,0,0,.42) 88%,rgba(0,0,0,.3) 100%);mask-image:linear-gradient(135deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.96) 18%,rgba(0,0,0,.86) 38%,rgba(0,0,0,.72) 58%,rgba(0,0,0,.57) 74%,rgba(0,0,0,.42) 88%,rgba(0,0,0,.3) 100%)}
-.belief-stack span,.belief-stack strong,.belief-stack em{position:relative;z-index:1;display:block;width:100%;font-style:normal;font-weight:950;line-height:.67;letter-spacing:-.065em;text-align:right;transform:skewX(-7deg);transform-origin:right center}
-.belief-stack span{right:14px;color:#ad62ff;font-size:37px;text-shadow:0 0 15px rgba(173,85,255,.55)}
-.belief-stack strong{right:11px;margin:7px 0 5px;color:#fff;font-size:36px;filter:drop-shadow(0 4px 7px rgba(0,0,0,.3))}
-.belief-stack em{right:12px;color:transparent;font-size:52px;-webkit-text-stroke:1.7px rgba(255,255,255,.94);filter:drop-shadow(0 0 7px rgba(192,112,255,.42))}
+.belief-stack{position:relative;right:0;width:210px;overflow:hidden;background:transparent;text-transform:uppercase}
+.belief-words{display:block;width:100%;font-style:normal}
+.belief-stack span,.belief-stack strong,.belief-stack em{position:relative;right:15px;z-index:1;display:block;width:100%;font-style:normal;font-weight:950;line-height:.74;letter-spacing:-.055em;text-align:right;transform:skewX(-3deg);transform-origin:right center}
+.belief-stack span{font-size:36px;background:linear-gradient(135deg,#bd78ff 8%,#a94cff 52%,rgba(169,76,255,.5) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none}
+.belief-stack strong{margin:7px 0 5px;font-size:34px;background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,.94) 43%,rgba(255,255,255,.58) 76%,rgba(255,255,255,.34) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 7px rgba(0,0,0,.25))}
+.belief-stack em{color:transparent;font-size:49px;-webkit-text-stroke:1.7px rgba(255,255,255,.88);-webkit-mask-image:linear-gradient(135deg,#000 0%,rgba(0,0,0,.78) 48%,rgba(0,0,0,.42) 100%);mask-image:linear-gradient(135deg,#000 0%,rgba(0,0,0,.78) 48%,rgba(0,0,0,.42) 100%);filter:drop-shadow(0 0 6px rgba(192,112,255,.3))}
