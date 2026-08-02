@@ -168,18 +168,18 @@ body[data-scene="welcome"] .brand span,body[data-scene="starting"] .brand span,b
   font-size:clamp(10px,.9vw,18px);
   animation:copyReveal .75s .55s cubic-bezier(.2,.8,.2,1) both;
 }
-body[data-scene="welcome"] .message h1{font-size:clamp(76px,9vw,182px)!important}
-body[data-scene="welcome"] .message p{font-size:clamp(13px,1.1vw,22px);letter-spacing:.22em}
+body[data-scene="welcome"] .message h1{font-size:clamp(82px,9.6vw,194px)!important}
+body[data-scene="welcome"] .message p{font-size:clamp(15px,1.25vw,25px);letter-spacing:.21em}
 .social-strip{display:none;position:absolute;z-index:5;left:8%;bottom:7%;align-items:center;gap:15px;color:#fff;animation:socialReveal .8s 1.15s cubic-bezier(.16,1,.3,1) both}
 body[data-scene="welcome"] .social-strip{display:flex}
 .social-icons{display:flex;align-items:center;gap:11px;padding-right:18px;border-right:1px solid rgba(255,255,255,.28)}
 .social-icons svg{width:27px;height:27px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(169,76,255,.5));animation:socialIcon 4s ease-in-out infinite}
 .social-icons svg:nth-child(2){animation-delay:.18s}.social-icons svg:nth-child(3){animation-delay:.36s}.social-icons svg:nth-child(4){animation-delay:.54s}.social-icons .fill{fill:currentColor;stroke:none}
 .social-strip span{color:var(--violet);font-size:12px;font-weight:900;letter-spacing:.18em}.social-strip strong{font-size:17px;letter-spacing:.1em}
-body[data-scene="welcome"] .social-icons{gap:13px;padding-right:20px}
-body[data-scene="welcome"] .social-icons svg{width:32px;height:32px}
-body[data-scene="welcome"] .social-strip span{font-size:13px}
-body[data-scene="welcome"] .social-strip strong{font-size:20px}
+body[data-scene="welcome"] .social-icons{gap:14px;padding-right:22px}
+body[data-scene="welcome"] .social-icons svg{width:36px;height:36px}
+body[data-scene="welcome"] .social-strip span{font-size:15px}
+body[data-scene="welcome"] .social-strip strong{font-size:23px}
 @keyframes socialReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes socialIcon{0%,75%,100%{opacity:.72;transform:translateY(0)}84%{opacity:1;transform:translateY(-3px)}}
 .farewell-signature{display:none;position:absolute;z-index:5;right:4%;bottom:8%;width:29%;padding:22px 25px 24px;color:#fff;border:1px solid rgba(207,151,255,.72);border-radius:24px 24px 7px 24px;background:linear-gradient(110deg,transparent 24%,rgba(220,179,255,.14) 42%,transparent 58%) -140% 0/220% 100% no-repeat,linear-gradient(135deg,rgba(9,6,12,.9),rgba(53,21,71,.84));box-shadow:0 20px 50px rgba(0,0,0,.46),inset 0 1px 0 rgba(255,255,255,.13);font-family:"Snell Roundhand","Segoe Script","Brush Script MT",cursive;font-size:clamp(20px,1.55vw,32px);font-style:normal;font-weight:600;line-height:1.18;text-align:center;text-shadow:0 3px 14px rgba(0,0,0,.82);backdrop-filter:blur(14px);animation:bubbleIn .7s .65s cubic-bezier(.16,1,.3,1) both,bubbleGlow 4s 3s ease-in-out infinite,bubbleSheen 7s 2.8s ease-in-out infinite}
 body[data-scene="ending"] .farewell-signature{display:block}
