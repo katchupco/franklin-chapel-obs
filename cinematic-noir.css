@@ -1,9 +1,12 @@
 :root{--purple:#7a2ae5;--violet:#a94cff;--ink:#050407;--white:#f8f6fa}
 
 .scene{
+  position:relative;
   border-radius:0;
   background:#050407;
 }
+.scene::after{content:"";position:absolute;z-index:3;inset:-35%;display:none;pointer-events:none;background-image:repeating-radial-gradient(circle at 35% 45%,rgba(255,255,255,.34) 0 1px,transparent 1px 4px);background-size:7px 7px;opacity:.055;mix-blend-mode:soft-light;animation:filmGrain .85s steps(2,end) infinite}
+body[data-scene="welcome"] .scene::after,body[data-scene="starting"] .scene::after,body[data-scene="ending"] .scene::after{display:block}
 
 .broadcast-bg{
   background:#050407;
@@ -50,7 +53,7 @@
   height:100%;
   object-fit:cover;
   filter:saturate(.82) contrast(1.08);
-  animation:galleryDrift 12s ease-in-out infinite alternate;
+  animation:galleryDrift 16s ease-in-out infinite alternate;
 }
 .starting-gallery figure:nth-child(even) img{animation-direction:alternate-reverse}
 body[data-scene="starting"] .starting-gallery,
@@ -641,14 +644,15 @@ body[data-scene="scripturelower"] .wash{display:none}
 }
 @keyframes galleryShuffle{
   0%{opacity:0}
-  2.86%{opacity:1}
-  11.43%{opacity:1}
-  14.29%,100%{opacity:0}
+  4%{opacity:1}
+  12.5%{opacity:1}
+  18%,100%{opacity:0}
 }
 @keyframes galleryDrift{
   from{transform:scale(1.02) translate3d(0,0,0)}
-  to{transform:scale(1.1) translate3d(-1.5%,-1%,0)}
+  to{transform:scale(1.07) translate3d(-1.1%,-.75%,0)}
 }
+@keyframes filmGrain{0%{transform:translate3d(-2.5%,-1.5%,0) rotate(.001deg)}25%{transform:translate3d(2%,1%,0)}50%{transform:translate3d(-1%,2.5%,0)}75%{transform:translate3d(2.5%,-2%,0)}100%{transform:translate3d(-2.5%,-1.5%,0)}}
 @keyframes haloSpin{to{transform:rotate(360deg)}}
 @keyframes badgeEntrance{
   from{opacity:0;transform:scale(.4) rotate(-160deg)}
@@ -671,7 +675,7 @@ body[data-scene="scripturelower"] .wash{display:none}
   50%{top:calc(100% - 9px);opacity:1}
 }
 @media (prefers-reduced-motion:reduce){
-  .scene-video,.scene-photo,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
+  .scene::after,.scene-video,.scene-photo,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
   .scripture-card,.events article,.starting-gallery figure,.starting-gallery img,
   .anniversary-badge,.anniversary-badge::before,.anniversary-badge::after,
   .countdown span,.countdown strong,.countdown p,.giving-options article,
