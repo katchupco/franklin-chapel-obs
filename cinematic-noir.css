@@ -89,11 +89,10 @@ body[data-scene="countdown"] .scene{
 body[data-scene="welcome"] .worship-atmosphere,body[data-scene="starting"] .worship-atmosphere,body[data-scene="countdown"] .worship-atmosphere,body[data-scene="announcement"] .worship-atmosphere,body[data-scene="offering"] .worship-atmosphere,body[data-scene="scripture"] .worship-atmosphere,body[data-scene="brb"] .worship-atmosphere,body[data-scene="ending"] .worship-atmosphere,body[data-scene="live"] .worship-atmosphere{display:block}
 .worship-atmosphere::before,.worship-atmosphere::after{content:"";position:absolute;width:52vw;height:52vw;border-radius:50%;filter:blur(56px);opacity:.34;background:radial-gradient(circle,rgba(var(--atmo-rgb),.7) 0%,rgba(var(--atmo-rgb),.22) 38%,transparent 70%);animation:atmosphereDrift 16s ease-in-out infinite alternate}
 .worship-atmosphere::before{right:-18vw;top:-27vw}.worship-atmosphere::after{left:-24vw;bottom:-37vw;opacity:.2;animation-delay:-8s;animation-direction:alternate-reverse}
-.worship-atmosphere>b{position:absolute;right:8%;top:15%;width:28%;height:62%;background:linear-gradient(112deg,transparent 10%,rgba(215,169,255,.1) 45%,transparent 72%);filter:blur(12px);transform:skewX(-16deg);animation:lightVeil 11s ease-in-out infinite alternate}
-.worship-atmosphere i{position:absolute;width:7px;height:7px;border-radius:50%;background:rgba(238,215,255,.86);box-shadow:0 0 11px rgba(201,136,255,.92),0 0 28px rgba(var(--atmo-rgb),.58);opacity:0;animation:lightFloat 13s ease-in-out infinite}
-.worship-atmosphere i:nth-of-type(1){left:12%;bottom:5%;animation-delay:-2s}.worship-atmosphere i:nth-of-type(2){left:29%;bottom:12%;width:4px;height:4px;animation-delay:-7s;animation-duration:16s}.worship-atmosphere i:nth-of-type(3){left:48%;bottom:3%;width:9px;height:9px;animation-delay:-11s;animation-duration:18s}.worship-atmosphere i:nth-of-type(4){left:67%;bottom:8%;width:5px;height:5px;animation-delay:-5s;animation-duration:15s}.worship-atmosphere i:nth-of-type(5){left:81%;bottom:4%;width:8px;height:8px;animation-delay:-9s;animation-duration:17s}.worship-atmosphere i:nth-of-type(6){left:91%;bottom:18%;width:4px;height:4px;animation-delay:-3s;animation-duration:14s}
+.worship-atmosphere>b{position:absolute;left:-58%;top:-24%;width:42%;height:148%;background:linear-gradient(105deg,transparent 6%,rgba(137,52,226,.08) 30%,rgba(229,196,255,.2) 48%,rgba(151,61,235,.09) 66%,transparent 90%);filter:blur(38px);transform:rotate(-8deg);animation:cinematicLightLeak 18s cubic-bezier(.45,0,.2,1) infinite}
+.worship-atmosphere i{display:none}
 body[data-scene="ending"] .worship-atmosphere{--atmo-rgb:177,72,241}body[data-scene="announcement"] .worship-atmosphere{--atmo-rgb:132,46,222}body[data-scene="brb"] .worship-atmosphere{--atmo-rgb:112,45,185}
-body[data-scene="scripture"] .worship-atmosphere,body[data-scene="offering"] .worship-atmosphere{opacity:.55}body[data-scene="scripture"] .worship-atmosphere::before,body[data-scene="scripture"] .worship-atmosphere::after,body[data-scene="scripture"] .worship-atmosphere>b,body[data-scene="offering"] .worship-atmosphere::before,body[data-scene="offering"] .worship-atmosphere::after,body[data-scene="offering"] .worship-atmosphere>b{animation:none}body[data-scene="scripture"] .worship-atmosphere i,body[data-scene="offering"] .worship-atmosphere i,body[data-scene="live"] .worship-atmosphere i{display:none}body[data-scene="live"] .worship-atmosphere{opacity:.28}
+body[data-scene="scripture"] .worship-atmosphere,body[data-scene="offering"] .worship-atmosphere{opacity:.55}body[data-scene="scripture"] .worship-atmosphere::before,body[data-scene="scripture"] .worship-atmosphere::after,body[data-scene="scripture"] .worship-atmosphere>b,body[data-scene="offering"] .worship-atmosphere::before,body[data-scene="offering"] .worship-atmosphere::after,body[data-scene="offering"] .worship-atmosphere>b{animation:none}body[data-scene="live"] .worship-atmosphere{opacity:.22}body[data-scene="live"] .worship-atmosphere>b{display:none}
 body[data-media="video"] .scene-photo{
   background-image:none!important;
   animation:none;
@@ -664,8 +663,7 @@ body[data-scene="scripturelower"] .wash{display:none}
 }
 @keyframes filmGrain{0%{transform:translate3d(-2.5%,-1.5%,0) rotate(.001deg)}25%{transform:translate3d(2%,1%,0)}50%{transform:translate3d(-1%,2.5%,0)}75%{transform:translate3d(2.5%,-2%,0)}100%{transform:translate3d(-2.5%,-1.5%,0)}}
 @keyframes atmosphereDrift{from{transform:translate3d(-3%,-2%,0) scale(.9)}to{transform:translate3d(7%,8%,0) scale(1.12)}}
-@keyframes lightVeil{from{opacity:.28;transform:translateX(-12%) skewX(-16deg)}to{opacity:.7;transform:translateX(16%) skewX(-16deg)}}
-@keyframes lightFloat{0%{opacity:0;transform:translate3d(0,0,0) scale(.55)}18%{opacity:.68}72%{opacity:.25}100%{opacity:0;transform:translate3d(18px,-72vh,0) scale(1.2)}}
+@keyframes cinematicLightLeak{0%,12%{opacity:0;transform:translateX(0) rotate(-8deg)}24%{opacity:.52}55%{opacity:.2}72%,100%{opacity:0;transform:translateX(390%) rotate(-8deg)}}
 @keyframes haloSpin{to{transform:rotate(360deg)}}
 @keyframes badgeEntrance{
   from{opacity:0;transform:scale(.4) rotate(-160deg)}
@@ -688,7 +686,7 @@ body[data-scene="scripturelower"] .wash{display:none}
   50%{top:calc(100% - 9px);opacity:1}
 }
 @media (prefers-reduced-motion:reduce){
-  .scene::after,.scene-video,.scene-photo,.worship-atmosphere::before,.worship-atmosphere::after,.worship-atmosphere>b,.worship-atmosphere i,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
+  .scene::after,.scene-video,.scene-photo,.worship-atmosphere::before,.worship-atmosphere::after,.worship-atmosphere>b,.wash::before,.topbar,.brand,.eyebrow,.message h1,.message p,
   .scripture-card,.events article,.starting-gallery figure,.starting-gallery img,
   .anniversary-badge,.anniversary-badge::before,.anniversary-badge::after,
   .countdown span,.countdown strong,.countdown p,.giving-options article,
