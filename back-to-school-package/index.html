@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Back 2 School</title>
+  <link rel="stylesheet" href="theme.css?v=1">
+</head>
+<body>
+  <main class="scene">
+    <div class="flyer-bg" aria-hidden="true"></div>
+    <div class="locker-grid" aria-hidden="true"></div>
+    <div class="color-wash" aria-hidden="true"></div>
+    <div class="school-texture" aria-hidden="true"></div>
+    <header class="brand">
+      <img src="../assets/franklin-lower-third-mark.png" alt="Franklin Chapel">
+      <div><strong>FRANKLIN CHAPEL</strong><span>A.M.E. ZION CHURCH • LAURINBURG, NC</span></div>
+    </header>
+    <div class="theme-tag"><span>BACK</span><b>2</b><strong>SCHOOL</strong></div>
+    <section class="message">
+      <small id="eyebrow">A SPECIAL SUNDAY EXPERIENCE</small>
+      <h1 id="headline">WELCOME<br>TO CLASS.</h1>
+      <p id="subhead">FAITH • PURPOSE • POSSIBILITY</p>
+    </section>
+    <section class="countdown">
+      <small>WORSHIP BEGINS IN</small><strong id="timer">05:00</strong>
+      <p>“TEACH ME GOOD JUDGMENT AND KNOWLEDGE.” — PSALM 119:66</p>
+    </section>
+    <section class="scripture-card">
+      <small>THE WORD • TODAY’S LESSON</small>
+      <h2 id="reference">PROVERBS 1:5</h2>
+      <p id="verse">A WISE MAN WILL HEAR, AND WILL INCREASE LEARNING.</p>
+    </section>
+    <section class="live-frame"><span>LIVE WORSHIP</span></section>
+    <section class="giving">
+      <article><img src="../assets/qr-give-website.png" alt="Website giving"><div><small>WEBSITE</small><strong>GIVE ONLINE</strong><span>FRANKLINCHAPEL.ORG/GIVE</span></div></article>
+      <article><img src="../assets/qr-give-cashapp.png" alt="Cash App"><div><small>CASH APP</small><strong>$FRANKLINCHAPELNC</strong><span>SCAN TO GIVE</span></div></article>
+      <article><img src="../assets/qr-give-paypal.png" alt="PayPal"><div><small>PAYPAL</small><strong>FRANKLIN CHAPEL</strong><span>SCAN TO GIVE</span></div></article>
+      <article><img src="../assets/qr-give-givelify.png" alt="Givelify"><div><small>GIVELIFY</small><strong>FRANKLIN CHAPEL</strong><span>SCAN TO GIVE</span></div></article>
+    </section>
+    <footer><b>AUGUST 23 • 10:00 AM</b><span>SCHOOL SUPPLIES GIVEAWAY FOLLOWING WORSHIP</span></footer>
+  </main>
+  <script>
+    const params=new URLSearchParams(location.search);
+    const scene=params.get('scene')||'welcome';
+    document.body.dataset.scene=scene;
+    const content={
+      welcome:['A SPECIAL SUNDAY EXPERIENCE','WELCOME<br>TO CLASS.','FAITH • PURPOSE • POSSIBILITY'],
+      starting:['GET READY FOR WORSHIP','STREAM<br>STARTING SOON.','BACK 2 SCHOOL SUNDAY • AUGUST 23'],
+      live:['','',''],
+      scripture:['','',''],
+      offering:['GENEROSITY IS A LESSON WE LIVE','THANK YOU FOR<br>GIVING.','EVERY GIFT MAKES A DIFFERENCE'],
+      brb:['CLASS IS STILL IN SESSION','WE’LL BE<br>RIGHT BACK.','WORSHIP WILL CONTINUE SHORTLY'],
+      ending:['TAKE FAITH INTO THE HALLWAYS','GO FORTH.<br>SHINE BRIGHT.','COVERED • EQUIPPED • CALLED'],
+      countdown:['','','']
+    };
+    const selected=content[scene]||content.welcome;
+    document.querySelector('#eyebrow').textContent=selected[0];
+    document.querySelector('#headline').innerHTML=selected[1];
+    document.querySelector('#subhead').textContent=selected[2];
+    if(params.get('reference')) document.querySelector('#reference').textContent=params.get('reference');
+    if(params.get('verse')) document.querySelector('#verse').textContent=params.get('verse');
+    if(scene==='countdown'){
+      let remaining=Math.max(0,Number(params.get('minutes')||5)*60);
+      const timer=document.querySelector('#timer');
+      const tick=()=>{timer.textContent=`${String(Math.floor(remaining/60)).padStart(2,'0')}:${String(remaining%60).padStart(2,'0')}`;if(remaining>0)remaining--};
+      tick();setInterval(tick,1000);
+    }
+  </script>
+</body>
+</html>
