@@ -77,3 +77,29 @@ body[data-theme="b2s"][data-scene="announcement"] .locker-vents{right:-4%;opacit
 body[data-theme="b2s"][data-scene="brb"] .locker-vents{right:-4%;opacity:.26}body[data-theme="b2s"][data-scene="brb"] .pencil-stroke{right:2%;bottom:4%;opacity:.66}
 @keyframes schoolPageReveal{0%{transform:translateX(0)}100%{transform:translateX(112%)}}
 @media(prefers-reduced-motion:reduce){body[data-theme="b2s"] .school-transition{animation:none;display:none}}
+
+/* Final campaign system: editorial, material-led, and intentionally spare. */
+body[data-theme="b2s"] .locker-vents,body[data-theme="b2s"] .pencil-stroke,body[data-theme="b2s"] .school-bus{display:none!important}
+body[data-theme="b2s"] .b2s-graphics>span{display:none!important}
+body[data-theme="b2s"] .scene-photo{filter:saturate(.68) contrast(1.13) brightness(.82)}
+body[data-theme="b2s"] .scene-photo::after{background:linear-gradient(90deg,rgba(5,4,8,.98) 0%,rgba(7,4,10,.93) 38%,rgba(25,10,40,.52) 70%,rgba(10,5,17,.26) 100%),linear-gradient(0deg,rgba(3,2,6,.88),transparent 52%),radial-gradient(circle at 78% 18%,rgba(154,65,237,.18),transparent 36%)}
+body[data-theme="b2s"] .wash{inset:3.4%;border-color:rgba(255,216,72,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
+body[data-theme="b2s"] .wash::before{width:112px;height:3px;background:var(--school-gold);box-shadow:none;animation:none}
+body[data-theme="b2s"] .topbar{padding:12px 16px;color:#f5eff8;background:rgba(18,8,27,.84);border-color:rgba(255,255,255,.18);box-shadow:inset 0 -2px var(--school-gold);font-size:clamp(11px,.82vw,16px);letter-spacing:.14em}
+body[data-theme="b2s"] .brand{gap:12px}body[data-theme="b2s"] .site-logo{width:66px!important;height:66px!important;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35))}
+body[data-theme="b2s"] .brand strong{letter-spacing:.13em;font-size:clamp(13px,1vw,19px)!important}body[data-theme="b2s"] .brand span{color:rgba(255,255,255,.7);font-size:clamp(8px,.6vw,12px)!important}
+body[data-theme="b2s"] .message{top:30%;left:7%;width:55%!important;isolation:isolate}
+body[data-theme="b2s"] .message::before{content:"";position:absolute;z-index:-1;top:-24px;bottom:-29px;left:-25px;width:8px;background:linear-gradient(var(--school-gold),rgba(255,196,0,.05));box-shadow:18px 0 0 -16px rgba(223,36,115,.82)}
+body[data-theme="b2s"] .eyebrow{padding:0;color:var(--school-gold);background:none;border:0;box-shadow:none;font-size:clamp(10px,.75vw,15px);letter-spacing:.19em;transform:none}
+body[data-theme="b2s"] .message h1{margin:16px 0 18px;font-family:"Arial Black",Impact,sans-serif;font-style:normal;letter-spacing:-.075em;line-height:.8;text-shadow:2px 3px 0 rgba(223,36,115,.76),0 18px 36px rgba(0,0,0,.6);-webkit-text-stroke:0}
+body[data-theme="b2s"] .message p{padding:11px 14px 10px;color:#21112b;background:linear-gradient(90deg,rgba(255,211,41,.96),rgba(255,196,0,.9)),url("assets/back-to-school/notebook-paper-texture.png") center/360px;background-blend-mode:multiply;border:0;border-left:4px solid var(--school-pink);border-radius:0;box-shadow:none;clip-path:none;transform:none;letter-spacing:.11em}
+body[data-theme="b2s"] .social-strip{padding:10px 0;border-top:1px solid rgba(255,255,255,.14)}
+body[data-theme="b2s"] .social-strip span{color:rgba(255,255,255,.62)}body[data-theme="b2s"] .social-strip strong{color:#fff}
+body[data-theme="b2s"] .scripture-card{background:linear-gradient(125deg,rgba(15,7,22,.95),rgba(42,14,60,.91)),url("assets/back-to-school/notebook-paper-texture.png") center/720px;background-blend-mode:multiply;border-left:5px solid var(--school-gold);border-top:1px solid rgba(255,255,255,.16);border-right:0;padding:38px 42px;box-shadow:0 28px 65px rgba(0,0,0,.45)}
+body[data-theme="b2s"] .events article,body[data-theme="b2s"] .giving-options article{border:1px solid rgba(255,255,255,.16);border-top:3px solid var(--school-gold);background:linear-gradient(145deg,rgba(12,7,18,.94),rgba(50,16,69,.9));box-shadow:0 18px 42px rgba(0,0,0,.3)}
+body[data-theme="b2s"] .events article:nth-child(even),body[data-theme="b2s"] .giving-options article:nth-child(even){border-top-color:var(--school-gold)}
+body[data-theme="b2s"] .countdown strong{font-family:"Arial Black",Impact,sans-serif;font-style:normal;text-shadow:3px 4px 0 rgba(223,36,115,.72),0 18px 42px rgba(0,0,0,.55)}
+body[data-theme="b2s"] .farewell-signature{border:1px solid rgba(255,211,41,.55);border-left:4px solid var(--school-gold);background:linear-gradient(135deg,rgba(16,8,23,.94),rgba(61,20,83,.9))!important;box-shadow:0 20px 46px rgba(0,0,0,.4)!important}
+body[data-theme="b2s"] .school-transition{background:linear-gradient(90deg,rgba(255,255,255,.15),transparent 45%),url("assets/back-to-school/notebook-paper-texture.png") center/cover;box-shadow:-30px 0 58px rgba(0,0,0,.4);animation:schoolPageReveal .8s cubic-bezier(.77,0,.18,1) both}
+body[data-theme="b2s"][data-scene="live"] .wash{inset:3%;border-color:rgba(255,211,41,.3)}
+body[data-theme="b2s"][data-scene="offering"] .message{top:19%;width:62%!important}body[data-theme="b2s"][data-scene="offering"] .message h1{font-size:clamp(48px,4.7vw,92px)!important}
