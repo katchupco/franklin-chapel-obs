@@ -6,7 +6,7 @@
   <title>Franklin Chapel Live Package</title>
   <link rel="stylesheet" href="styles.css?v=lowerthird-tv-scale-1">
   <link rel="stylesheet" href="cinematic-noir.css?v=cinematic-light-leak-1">
-  <link rel="stylesheet" href="back-to-school-theme.css?v=3">
+  <link rel="stylesheet" href="back-to-school-theme.css?v=4">
 </head>
 <body>
   <main id="scene" class="scene">
@@ -25,7 +25,7 @@
     </div>
     <div class="scene-photo" aria-hidden="true"></div>
     <div class="worship-atmosphere" aria-hidden="true"><b></b></div>
-    <div class="b2s-graphics" aria-hidden="true"><i class="locker-vents"></i><i class="pencil-stroke"></i><span>AUGUST 23 • 10:00 AM</span></div>
+    <div class="b2s-graphics" aria-hidden="true"><i class="locker-vents"></i><i class="pencil-stroke"></i><span>BACK 2 SCHOOL</span></div>
     <div class="wash" aria-hidden="true"></div>
     <div class="topbar" id="topbar">WE BELIEVE GOD</div>
 
@@ -239,7 +239,7 @@
 
     const content = isB2S ? {
       welcome: ["BACK 2 SCHOOL SUNDAY", "WELCOME<br>HOME.", "COVERED • EQUIPPED • CALLED"],
-      starting: ["GET READY FOR WORSHIP", "STREAM<br>STARTING SOON.", "BACK 2 SCHOOL SUNDAY • AUGUST 23"],
+      starting: ["GET READY FOR WORSHIP", "STREAM<br>STARTING SOON.", "COVERED • EQUIPPED • CALLED"],
       countdown: ["", "", ""],
       brb: ["CLASS IS STILL IN SESSION", "WE’LL BE<br>RIGHT BACK.", "WORSHIP WILL CONTINUE SHORTLY."],
       ending: ["TAKE FAITH INTO THE HALLWAYS", "GO FORTH.<br>SHINE BRIGHT.", "WE LOVE YOU • HAVE A BLESSED SCHOOL YEAR"],
@@ -263,7 +263,7 @@
     document.getElementById("headline").innerHTML = selected[1];
     document.getElementById("subhead").textContent = selected[2];
     if (isB2S) {
-      document.getElementById("topbar").textContent = "BACK 2 SCHOOL • WE BELIEVE GOD";
+      document.getElementById("topbar").textContent = "WE BELIEVE GOD";
       document.getElementById("countdownLabel").textContent = "CLASS BEGINS IN";
       document.getElementById("countdownVerse").textContent = "“TEACH ME GOOD JUDGMENT AND KNOWLEDGE.” — PSALM 119:66";
     }
