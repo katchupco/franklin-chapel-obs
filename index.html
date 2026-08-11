@@ -6,6 +6,7 @@
   <title>Franklin Chapel Live Package</title>
   <link rel="stylesheet" href="styles.css?v=lowerthird-tv-scale-1">
   <link rel="stylesheet" href="cinematic-noir.css?v=cinematic-light-leak-1">
+  <link rel="stylesheet" href="back-to-school-theme.css?v=2">
 </head>
 <body>
   <main id="scene" class="scene">
@@ -24,6 +25,7 @@
     </div>
     <div class="scene-photo" aria-hidden="true"></div>
     <div class="worship-atmosphere" aria-hidden="true"><b></b></div>
+    <div class="b2s-graphics" aria-hidden="true"><i class="locker-vents"></i><i class="pencil-stroke"></i><span>AUGUST 23 • 10:00 AM</span></div>
     <div class="wash" aria-hidden="true"></div>
     <div class="topbar" id="topbar">WE BELIEVE GOD</div>
 
@@ -143,7 +145,10 @@
   <script>
     const params = new URLSearchParams(location.search);
     const sceneName = params.get("scene") || "starting";
+    const themeName = params.get("theme") || "main";
+    const isB2S = themeName === "b2s";
     document.body.dataset.scene = sceneName;
+    document.body.dataset.theme = themeName;
     document.body.dataset.layout = params.get("layout") || "standard";
 
     const galleryGroups = [
@@ -212,7 +217,7 @@
       brb: "assets/obs-brb.mov"
     };
     const sceneVideo = document.getElementById("sceneVideo");
-    if (sceneVideos[sceneName]) {
+    if (sceneVideos[sceneName] && !isB2S) {
       sceneVideo.src = sceneVideos[sceneName];
       sceneVideo.muted = true;
       document.body.dataset.media = "video";
@@ -232,7 +237,17 @@
       document.body.dataset.media = "static";
     }
 
-    const content = {
+    const content = isB2S ? {
+      welcome: ["BACK 2 SCHOOL SUNDAY", "WELCOME<br>HOME.", "COVERED • EQUIPPED • CALLED"],
+      starting: ["GET READY FOR WORSHIP", "STREAM<br>STARTING SOON.", "BACK 2 SCHOOL SUNDAY • AUGUST 23"],
+      countdown: ["", "", ""],
+      brb: ["CLASS IS STILL IN SESSION", "WE’LL BE<br>RIGHT BACK.", "WORSHIP WILL CONTINUE SHORTLY."],
+      ending: ["TAKE FAITH INTO THE HALLWAYS", "GO FORTH.<br>SHINE BRIGHT.", "WE LOVE YOU • HAVE A BLESSED SCHOOL YEAR"],
+      announcement: ["FRANKLIN CHAPEL PRESENTS", "BACK 2<br>SCHOOL SUNDAY.", "SCHOOL SUPPLIES GIVEAWAY FOLLOWING WORSHIP"],
+      offering: ["GENEROSITY IS A LESSON WE LIVE", "THANK YOU FOR<br>YOUR GENEROSITY.", "FRANKLINCHAPEL.ORG/GIVE"],
+      live: ["", "", ""],
+      scripture: ["", "", ""]
+    } : {
       welcome: ["YOU BELONG HERE", "WELCOME<br>HOME.", "WORSHIP • GROW • SERVE • BELIEVE"],
       starting: ["PREPARE YOUR HEART", "STREAM<br>STARTING SOON.", "SUNDAY WORSHIP • 10:00 AM"],
       countdown: ["", "", ""],
@@ -247,6 +262,11 @@
     document.getElementById("eyebrow").textContent = selected[0];
     document.getElementById("headline").innerHTML = selected[1];
     document.getElementById("subhead").textContent = selected[2];
+    if (isB2S) {
+      document.getElementById("topbar").textContent = "BACK 2 SCHOOL • WE BELIEVE GOD";
+      document.getElementById("countdownLabel").textContent = "CLASS BEGINS IN";
+      document.getElementById("countdownVerse").textContent = "“TEACH ME GOOD JUDGMENT AND KNOWLEDGE.” — PSALM 119:66";
+    }
 
     for (const key of ["speaker", "title", "verse", "reference"]) {
       const value = params.get(key);
@@ -359,6 +379,13 @@
     };
     const refreshEvents = async () => {
       if (sceneName !== "announcement") return;
+      if (isB2S) {
+        document.getElementById("events").innerHTML = `
+          <article><span>BACK 2 SCHOOL SUNDAY</span><strong>AUGUST 23 • 10:00 AM</strong><p>FRANKLIN CHAPEL A.M.E. ZION CHURCH</p></article>
+          <article><span>SCHOOL SUPPLIES GIVEAWAY</span><strong>FOLLOWING MORNING WORSHIP</strong><p>STUDENTS • FAMILIES • EDUCATORS</p></article>
+          <article><span>PRAYER FOR THE SCHOOL YEAR</span><strong>COVERED • EQUIPPED • CALLED</strong><p>WE BELIEVE GOD</p></article>`;
+        return;
+      }
       try {
         const today = new Date().toISOString().slice(0, 10);
         const cameraLayout = document.body.dataset.layout === "camera";
