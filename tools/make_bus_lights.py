@@ -2,10 +2,8 @@ from pathlib import Path
 from PIL import Image, ImageEnhance, ImageFilter, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-source = Image.open(ROOT / "assets/back-to-school/school-bus-rear.png").convert("RGBA")
-
-
-def make_layer(name, lamps, glow_color):
+def make_layer(source_name, name, lamps, glow_color):
+    source = Image.open(ROOT / f"assets/back-to-school/{source_name}").convert("RGBA")
     mask = Image.new("L", source.size, 0)
     draw = ImageDraw.Draw(mask)
     for x, y, radius in lamps:
@@ -26,13 +24,27 @@ def make_layer(name, lamps, glow_color):
 
 
 make_layer(
+    "school-bus-rear.png",
     "bus-red-lights.png",
-    [(632, 169, 26), (1144, 169, 26), (618, 505, 25), (1150, 505, 25),
-     (824, 67, 15), (875, 66, 15), (929, 67, 15)],
+    [(632, 169, 19), (1144, 169, 19), (618, 505, 21), (1150, 505, 21),
+     (824, 67, 9), (875, 66, 9), (929, 67, 9)],
     (255, 18, 35, 255),
 )
 make_layer(
+    "school-bus-rear.png",
     "bus-amber-lights.png",
-    [(700, 169, 26), (1086, 169, 26), (640, 620, 15), (1128, 620, 15)],
+    [(700, 169, 19), (1086, 169, 19), (640, 620, 11), (1128, 620, 11)],
     (255, 169, 24, 255),
+)
+make_layer(
+    "school-bus.png",
+    "bus-front-red-lights.png",
+    [(368, 164, 16), (746, 153, 16)],
+    (255, 18, 35, 255),
+)
+make_layer(
+    "school-bus.png",
+    "bus-front-amber-lights.png",
+    [(422, 164, 16), (693, 153, 16), (468, 611, 22)],
+    (255, 180, 30, 255),
 )

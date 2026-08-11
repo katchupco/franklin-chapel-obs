@@ -45,6 +45,11 @@ body[data-theme="b2s"][data-scene="welcome"] .school-bus::before,body[data-theme
 body[data-theme="b2s"][data-scene="welcome"] .school-bus::before{background:url("assets/back-to-school/bus-red-lights.png") center/contain no-repeat;mix-blend-mode:screen;animation:busBrakeLights 3.2s ease-in-out infinite}
 body[data-theme="b2s"][data-scene="welcome"] .school-bus::after{background:url("assets/back-to-school/bus-amber-lights.png") center/contain no-repeat;mix-blend-mode:screen;animation:busAmberLights 1.35s ease-in-out infinite}
 body[data-theme="b2s"][data-scene="welcome"] .b2s-graphics>span{right:4%;bottom:8.5%;z-index:2;min-width:168px;padding:13px 18px 11px;font-size:17px;transform:rotate(-1deg);box-shadow:0 7px 16px rgba(0,0,0,.42),inset 0 -3px rgba(90,42,0,.18)}
+body[data-theme="b2s"][data-scene="ending"] .pencil-stroke{display:none}
+body[data-theme="b2s"][data-scene="ending"] .school-bus{position:absolute;right:-570px;bottom:-35px;display:block;width:520px;height:293px;background:url("assets/back-to-school/school-bus.png") center/contain no-repeat;filter:drop-shadow(-16px 18px 24px rgba(0,0,0,.52));opacity:0;animation:endingBusPass 18s linear infinite}
+body[data-theme="b2s"][data-scene="ending"] .school-bus::before,body[data-theme="b2s"][data-scene="ending"] .school-bus::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen}
+body[data-theme="b2s"][data-scene="ending"] .school-bus::before{background:url("assets/back-to-school/bus-front-red-lights.png") center/contain no-repeat;animation:busBrakeLights 2.8s ease-in-out infinite}
+body[data-theme="b2s"][data-scene="ending"] .school-bus::after{background:url("assets/back-to-school/bus-front-amber-lights.png") center/contain no-repeat;animation:busAmberLights 1.15s ease-in-out infinite}
 body[data-theme="b2s"][data-scene="live"] .locker-vents,body[data-theme="b2s"][data-scene="scripture"] .locker-vents,body[data-theme="b2s"][data-scene="offering"] .locker-vents,body[data-theme="b2s"][data-scene="ending"] .locker-vents{display:none}
 body[data-theme="b2s"][data-scene="ending"] .farewell-signature{border-color:rgba(255,196,0,.62);background:linear-gradient(135deg,rgba(9,6,12,.91),rgba(65,17,90,.86));box-shadow:0 20px 50px rgba(0,0,0,.46),inset 0 -3px var(--school-pink)}
 @keyframes b2sFloat{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-6deg) translateY(-7px)}}
@@ -52,5 +57,6 @@ body[data-theme="b2s"][data-scene="ending"] .farewell-signature{border-color:rgb
 @keyframes busIdle{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes busBrakeLights{0%,34%,100%{opacity:.18;filter:brightness(.8)}42%,68%{opacity:1;filter:brightness(1.45)}76%{opacity:.3;filter:brightness(.9)}}
 @keyframes busAmberLights{0%,42%,100%{opacity:.08}50%,76%{opacity:.9}}
+@keyframes endingBusPass{0%,48%{opacity:0;transform:translateX(0)}52%{opacity:1;transform:translateX(0)}82%{opacity:1;transform:translateX(-2100px)}83%,100%{opacity:0;transform:translateX(-2100px)}}
 @media(prefers-reduced-motion:reduce){body[data-theme="b2s"] .pencil-stroke{animation:none!important}}
 @media(max-width:1200px){body[data-theme="b2s"] .locker-vents{width:190px;height:380px}body[data-theme="b2s"] .pencil-stroke{width:230px;height:130px}body[data-theme="b2s"][data-scene="offering"] .giving-options article{grid-template-columns:58px minmax(0,1fr);padding:9px;gap:8px}body[data-theme="b2s"][data-scene="offering"] .giving-qr{width:58px;height:58px}}
