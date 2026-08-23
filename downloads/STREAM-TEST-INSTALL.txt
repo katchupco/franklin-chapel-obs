@@ -1,0 +1,13 @@
+FRANKLIN CHAPEL STREAM TEST
+
+OBS installation:
+1. Open OBS Studio.
+2. Choose Scene Collection > Import.
+3. Select Franklin-Chapel-Stream-Test.json.
+4. Choose Scene Collection > Franklin Chapel • Stream Test.
+
+Hosted test-screen URL:
+https://katchupco.github.io/franklin-chapel-obs/stream-test-package/01-stream-test.html
+
+The collection is separate from the worship and Back 2 School collections.
+Use it before a broadcast to check framing, motion, audio, bitrate, stream output, and recording.
