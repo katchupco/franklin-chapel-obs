@@ -143,3 +143,16 @@ body[data-theme="b2s"][data-scene="welcome"] .yearbook-frame,body[data-theme="b2
 @keyframes yearbookSettle{from{opacity:0;transform:translateY(40px) rotate(1.5deg)}to{opacity:.82;transform:translateY(0) rotate(-1.2deg)}}
 @media(max-width:1200px){body[data-theme="b2s"][data-scene="welcome"] .yearbook-frame,body[data-theme="b2s"][data-scene="starting"] .yearbook-frame,body[data-theme="b2s"][data-scene="countdown"] .yearbook-frame{width:300px;height:169px}}
 body[data-theme="b2s"] .yearbook-frame{display:none!important}
+
+/* Back 2 School dismissal — replaces the main-theme couple farewell. */
+body[data-theme="b2s"][data-scene="ending"] .scene-photo,body[data-theme="b2s"][data-scene="ending"] .farewell-signature{display:none!important}
+body[data-theme="b2s"][data-scene="ending"] .broadcast-bg{background:repeating-linear-gradient(180deg,rgba(255,255,255,.025) 0 1px,transparent 1px 47px),radial-gradient(circle at 82% 32%,rgba(132,43,210,.48),transparent 31%),radial-gradient(circle at 70% 88%,rgba(223,36,115,.18),transparent 28%),linear-gradient(118deg,#07040a 0%,#15091f 48%,#4d166e 100%)}
+body[data-theme="b2s"][data-scene="ending"] .message{top:28%;left:7%;width:55%!important}
+body[data-theme="b2s"][data-scene="ending"] .message h1{font-size:clamp(76px,8.2vw,157px)!important;line-height:.82}
+body[data-theme="b2s"][data-scene="ending"] .message p{font-size:clamp(11px,.9vw,18px)}
+body[data-theme="b2s"][data-scene="ending"] .school-bus{position:absolute;right:-7%;bottom:-8%;z-index:4;display:block!important;width:820px;height:461px;background:url("assets/back-to-school/school-bus-rear.png") center/contain no-repeat;filter:drop-shadow(-24px 28px 34px rgba(0,0,0,.55));opacity:0;animation:endingBusSettle 1.45s .35s cubic-bezier(.16,1,.3,1) forwards,endingBusBreathe 6s 1.8s ease-in-out infinite}
+body[data-theme="b2s"][data-scene="ending"] .school-bus::before,body[data-theme="b2s"][data-scene="ending"] .school-bus::after{display:none!important}
+body[data-theme="b2s"][data-scene="ending"] .worship-atmosphere{opacity:.24}
+@keyframes endingBusSettle{from{opacity:0;transform:translate3d(210px,45px,0) scale(.94)}to{opacity:.88;transform:translate3d(0,0,0) scale(1)}}
+@keyframes endingBusBreathe{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(7px,-3px,0)}}
+@media(max-width:1200px){body[data-theme="b2s"][data-scene="ending"] .school-bus{width:590px;height:332px}body[data-theme="b2s"][data-scene="ending"] .message{width:58%!important}}
