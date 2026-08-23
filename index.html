@@ -6,7 +6,7 @@
   <title>Franklin Chapel Live Package</title>
   <link rel="stylesheet" href="styles.css?v=lowerthird-tv-scale-1">
   <link rel="stylesheet" href="cinematic-noir.css?v=cinematic-light-leak-1">
-  <link rel="stylesheet" href="back-to-school-theme.css?v=20">
+  <link rel="stylesheet" href="back-to-school-theme.css?v=21">
 </head>
 <body>
   <main id="scene" class="scene">
@@ -70,6 +70,30 @@
         <img class="badge-church" src="assets/franklin-lower-third-mark.png" alt="Franklin Chapel">
       </span>
     </div>
+
+    <aside class="b2s-live-mark" aria-label="Back 2 School Sunday">
+      <i aria-hidden="true"></i>
+      <span>BACK<br>2 SCHOOL</span>
+    </aside>
+
+    <section class="live-lower-third" aria-live="polite">
+      <div class="live-lt-accent"></div>
+      <div class="live-lt-copy">
+        <span id="live-lt-kicker">SENIOR PASTOR</span>
+        <strong id="live-lt-primary">PASTOR / SPEAKER</strong>
+        <small id="live-lt-secondary">FRANKLIN CHAPEL AME ZION CHURCH</small>
+      </div>
+      <b class="live-lt-pencil" aria-hidden="true"></b>
+    </section>
+
+    <section class="live-scripture-overlay" aria-live="polite">
+      <div class="live-scripture-accent"></div>
+      <div class="live-scripture-copy">
+        <span>TODAY’S SCRIPTURE</span>
+        <blockquote id="live-scripture-text">For God so loved the world, that he gave his only begotten Son.</blockquote>
+      </div>
+      <strong id="live-scripture-reference">JOHN 3:16</strong>
+    </section>
 
     <section class="lower-third">
       <div class="speaker">
@@ -313,6 +337,103 @@
         fitScripture();
       });
       scriptureBus.postMessage({action:"requestCurrent",sentAt:Date.now()});
+    }
+
+    if (sceneName === "live") {
+      const lowerChannel = "franklin-chapel-lower-thirds-v1";
+      const lowerStorage = "franklin-chapel-lower-third-command-v1";
+      const scriptureChannel = "franklin-chapel-scripture-v1";
+      const scriptureStorage = "franklin-chapel-scripture-command-v1";
+      const liveLower = document.querySelector(".live-lower-third");
+      const liveScripture = document.querySelector(".live-scripture-overlay");
+      let lowerSentAt = 0;
+      let scriptureSentAt = 0;
+      let lowerTimer;
+      let lowerLoopTimer;
+      let lowerActiveId = null;
+
+      const syncLiveStack = () => {
+        document.body.classList.toggle("live-overlays-stacked", liveLower.classList.contains("show") && liveScripture.classList.contains("show"));
+        document.body.classList.toggle("live-scripture-visible", liveScripture.classList.contains("show"));
+      };
+      const hideLiveLower = () => {
+        clearTimeout(lowerTimer);
+        clearTimeout(lowerLoopTimer);
+        lowerActiveId = null;
+        liveLower.classList.remove("show");
+        syncLiveStack();
+      };
+      const applyLiveLower = message => {
+        if (!message?.action || (message.sentAt && message.sentAt <= lowerSentAt)) return;
+        lowerSentAt = message.sentAt || Date.now();
+        if (message.action === "hide" || message.action === "hideAll") return hideLiveLower();
+        if (message.action !== "show") return;
+        document.querySelector("#live-lt-kicker").textContent = message.kicker || "";
+        document.querySelector("#live-lt-primary").textContent = message.primary || "";
+        document.querySelector("#live-lt-secondary").textContent = message.secondary || "";
+        clearTimeout(lowerTimer);
+        clearTimeout(lowerLoopTimer);
+        lowerActiveId = message.id;
+        const reveal = () => {
+          if (lowerActiveId !== message.id) return;
+          liveLower.classList.remove("show");
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            liveLower.classList.add("show");
+            syncLiveStack();
+          }));
+          if (message.duration) lowerTimer = setTimeout(() => {
+            liveLower.classList.remove("show");
+            syncLiveStack();
+            if (message.loop && lowerActiveId === message.id) {
+              lowerLoopTimer = setTimeout(reveal, Math.max(1, message.interval - message.duration) * 1000);
+            } else {
+              lowerActiveId = null;
+            }
+          }, message.duration * 1000);
+        };
+        reveal();
+      };
+      const fitLiveScripture = () => {
+        const text = document.querySelector("#live-scripture-text");
+        text.classList.toggle("long", text.textContent.length > 145);
+        text.classList.toggle("extra-long", text.textContent.length > 250);
+      };
+      const applyLiveScripture = message => {
+        if (!message?.action || (message.sentAt && message.sentAt <= scriptureSentAt)) return;
+        scriptureSentAt = message.sentAt || Date.now();
+        if (message.reference) document.querySelector("#live-scripture-reference").textContent = message.reference;
+        if (message.text) document.querySelector("#live-scripture-text").textContent = message.text;
+        fitLiveScripture();
+        if (message.action === "hide") liveScripture.classList.remove("show");
+        if (message.action === "show") {
+          liveScripture.classList.remove("show");
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            liveScripture.classList.add("show");
+            syncLiveStack();
+          }));
+        }
+        syncLiveStack();
+      };
+      const readCommand = (key, apply) => {
+        try { apply(JSON.parse(localStorage.getItem(key))); } catch {}
+      };
+      if ("BroadcastChannel" in window) {
+        const lowerBus = new BroadcastChannel(lowerChannel);
+        const scriptureBus = new BroadcastChannel(scriptureChannel);
+        lowerBus.addEventListener("message", event => applyLiveLower(event.data));
+        scriptureBus.addEventListener("message", event => applyLiveScripture(event.data));
+        scriptureBus.postMessage({action:"requestCurrent",sentAt:Date.now()});
+      }
+      window.addEventListener("storage", event => {
+        if (event.key === lowerStorage && event.newValue) { try { applyLiveLower(JSON.parse(event.newValue)); } catch {} }
+        if (event.key === scriptureStorage && event.newValue) { try { applyLiveScripture(JSON.parse(event.newValue)); } catch {} }
+      });
+      readCommand(lowerStorage, applyLiveLower);
+      readCommand(scriptureStorage, applyLiveScripture);
+      setInterval(() => {
+        readCommand(lowerStorage, applyLiveLower);
+        readCommand(scriptureStorage, applyLiveScripture);
+      }, 500);
     }
 
     if (sceneName === "countdown") {
