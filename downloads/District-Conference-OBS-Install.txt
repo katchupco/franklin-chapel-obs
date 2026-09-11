@@ -1,0 +1,11 @@
+LAURINBURG DISTRICT CONFERENCE — OBS INSTALL
+
+1. In OBS, go to Scene Collection > Import and choose the included JSON file.
+2. The browser-source scenes use the live GitHub links, so the theme stays online.
+3. Set OBS canvas and output to 1920 x 1080.
+4. If a screen looks cached, right-click its browser source, choose Properties, then Refresh cache of current page.
+
+Theme preview:
+https://katchupco.github.io/franklin-chapel-obs/district-conference-package/preview-all.html
+
+All scenes are separate browser sources and can be adjusted in OBS like any other scene.
