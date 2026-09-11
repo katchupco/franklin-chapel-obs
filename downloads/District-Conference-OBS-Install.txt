@@ -3,9 +3,14 @@ LAURINBURG DISTRICT CONFERENCE — OBS INSTALL
 1. In OBS, go to Scene Collection > Import and choose the included JSON file.
 2. The browser-source scenes use the live GitHub links, so the theme stays online.
 3. Set OBS canvas and output to 1920 x 1080.
-4. If a screen looks cached, right-click its browser source, choose Properties, then Refresh cache of current page.
+4. The live overlay is transparent: put your camera source below it in the same scene.
+5. Add the District Conference Overlay Control page as a Custom Browser Dock. It controls the included lower-third and scripture overlay scenes.
+6. If a screen looks cached, right-click its browser source, choose Properties, then Refresh cache of current page.
 
 Theme preview:
 https://katchupco.github.io/franklin-chapel-obs/district-conference-package/preview-all.html
+
+Overlay Control Dock:
+https://katchupco.github.io/franklin-chapel-obs/district-conference-package/district-control.html
 
 All scenes are separate browser sources and can be adjusted in OBS like any other scene.
