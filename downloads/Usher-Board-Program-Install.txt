@@ -1,0 +1,5 @@
+USHER BOARD PROGRAM — OBS INSTALL
+
+In OBS, choose Scene Collection > Import and select Usher-Board-Program-OBS.json.
+In 02 • Usher Board Live, place your camera source underneath UB • Live Overlay.
+All theme browser sources are hosted online after the theme is published.
