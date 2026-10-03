@@ -14,6 +14,7 @@
   const progress = document.getElementById('announcementProgress');
   const audio = document.getElementById('announcementAudio');
   const music = document.getElementById('announcementMusic');
+  const audioStart = document.getElementById('announcementAudioStart');
   const audioSettings = window.FRANKLIN_ANNOUNCEMENT_AUDIO || {};
   const musicVolume = Math.min(1, Math.max(0, Number(audioSettings.musicVolume) || 0.24));
   const duckedMusicVolume = Math.min(musicVolume, Math.max(0, Number(audioSettings.duckedMusicVolume) || 0.10));
@@ -60,7 +61,24 @@
     if (!path) return;
     music.src = path;
     music.volume = 0;
-    music.play().then(() => fadeMusic(musicVolume)).catch(() => {});
+    music.play()
+      .then(() => fadeMusic(musicVolume))
+      .catch(() => { audioStart.hidden = false; });
+  }
+
+  function restartWithSound() {
+    audioStart.hidden = true;
+    window.clearTimeout(changeTimer);
+    stopVoiceover();
+    activeIndex = 0;
+    music.currentTime = 0;
+    music.volume = 0;
+    music.play()
+      .then(() => {
+        fadeMusic(musicVolume);
+        activate(activeIndex, true);
+      })
+      .catch(() => { audioStart.hidden = false; });
   }
 
   function stopVoiceover() {
@@ -83,6 +101,7 @@
   }
 
   audio.addEventListener('ended', () => fadeMusic(musicVolume));
+  audioStart.addEventListener('click', restartWithSound);
 
   function activate(index, firstRun) {
     window.clearTimeout(changeTimer);

@@ -59,6 +59,7 @@ Enable **Refresh browser when scene becomes active** to restart the countdown wh
 - Lower thirds animate in, remain visible, and animate out over 12 seconds.
 - Giving graphics list the official Website, Cash App (`$FRANKLINCHAPELNC`), PayPal, and Givelify options.
 - The announcement reel loops automatically with continuous music, one-second visual lead-ins, and a music duck beneath each voiceover.
+- When previewing the hosted reel in a regular browser, click **START AUDIO** if the browser blocks automatic sound. OBS playback starts automatically.
 - Add or reorder flyers in `announcement-reel-config.js`. Voiceovers live in `assets/announcements/voiceovers`, and the music bed lives in `assets/announcements/music`.
 - Keep the `assets` folder beside the HTML files so the background and flyer load correctly.
 - Open `index.html` in a browser to preview every item in the package.
