@@ -625,6 +625,44 @@ body.overlay { background: transparent; }
 @keyframes church-face { 0%, 42% { opacity: 0; transform: scale(.3) rotate(-24deg); filter: blur(7px); } 50%, 90% { opacity: 1; transform: scale(1) rotate(0); filter: blur(0); } 98%, 100% { opacity: 0; transform: scale(.35) rotate(24deg); filter: blur(8px); } }
 @keyframes orbit-flash { 0%, 41%, 51%, 90%, 100% { opacity: 0; transform: scale(.5); } 46%, 95% { opacity: .95; transform: scale(1.1); } }
 
+/* Cinematic announcement reel */
+body.announcement-page { background: #030613; }
+.announcement-scene { --announcement-accent: #7b51ff; --announcement-duration: 10000ms; position: relative; width: 100vw; height: 100vh; overflow: hidden; isolation: isolate; background: #030613; }
+.announcement-backdrop { position: absolute; inset: -9%; z-index: -6; background-position: center; background-size: cover; filter: blur(42px) brightness(.38) saturate(1.35); transform: scale(1.12); }
+.announcement-color-wash { position: absolute; inset: 0; z-index: -5; background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--announcement-accent) 30%, transparent), transparent 48%), linear-gradient(115deg, rgba(3,7,20,.86), rgba(5,9,25,.3) 47%, rgba(2,5,16,.9)); transition: background 1s ease; }
+.announcement-vignette { position: absolute; inset: 0; z-index: 6; pointer-events: none; box-shadow: inset 0 0 190px rgba(0,0,0,.9); background: linear-gradient(90deg, rgba(0,0,0,.44), transparent 27%, transparent 73%, rgba(0,0,0,.44)); }
+.announcement-light-sweep { position: absolute; z-index: 5; top: -40%; left: -32%; width: 24%; height: 190%; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent); filter: blur(20px); transform: rotate(17deg); animation: announcement-sweep 7s ease-in-out infinite; }
+.announcement-brand { position: absolute; z-index: 10; top: 42px; left: 52px; display: flex; align-items: center; gap: 14px; padding: 10px 18px 10px 10px; background: linear-gradient(90deg, rgba(3,10,24,.84), rgba(8,18,36,.28), transparent); border-left: 2px solid var(--announcement-accent); text-shadow: 0 2px 9px rgba(0,0,0,.72); }
+.announcement-brand img { width: 56px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--announcement-accent) 55%, transparent)); }
+.announcement-brand span { display: flex; flex-direction: column; }
+.announcement-brand strong { font-size: 16px; letter-spacing: .2em; }
+.announcement-brand small { margin-top: 5px; color: #bbd3dc; font-size: 10px; letter-spacing: .19em; }
+.announcement-stage { position: absolute; inset: 0; display: grid; place-items: center; padding: 34px 0 42px; perspective: 1500px; transition: opacity .55s ease, transform .75s cubic-bezier(.25,.8,.25,1); }
+.announcement-stage.is-leaving { opacity: 0; transform: scale(.96); }
+.announcement-halo { position: absolute; width: min(86vh, 48vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--announcement-accent) 32%, transparent), transparent 69%); filter: blur(18px); animation: announcement-halo 4.8s ease-in-out infinite; }
+.announcement-card { position: relative; z-index: 2; height: 92vh; max-width: 74vw; aspect-ratio: 1; overflow: hidden; background: rgba(4,8,18,.94); border: 1px solid rgba(230,248,255,.56); box-shadow: 0 34px 80px rgba(0,0,0,.66), 0 0 52px color-mix(in srgb, var(--announcement-accent) 28%, transparent); transform-origin: center; }
+.announcement-card.is-leaving { animation: announcement-card-out .85s cubic-bezier(.7,0,.84,.2) both !important; }
+.announcement-card > img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.announcement-glass { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.1), transparent 17%, transparent 66%, rgba(255,255,255,.05)); mix-blend-mode: screen; }
+.announcement-card-shine { position: absolute; inset: -30% -60%; pointer-events: none; background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.28) 50%, transparent 60%); transform: translateX(-45%); animation: announcement-card-shine 7.5s ease-in-out infinite 1.8s; }
+.announcement-reflection { position: absolute; z-index: 1; left: 50%; bottom: 1.2vh; width: min(76vh, 43vw); height: 9vh; background-position: center bottom; background-size: cover; opacity: .2; filter: blur(9px); transform: translateX(-50%) scaleY(-1); mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent); }
+.announcement-progress-wrap { position: absolute; z-index: 10; right: 52px; bottom: 40px; width: 360px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px 16px; padding: 15px 20px; background: linear-gradient(100deg, rgba(3,10,24,.9), rgba(13,24,46,.66)); border-right: 2px solid var(--announcement-accent); box-shadow: 0 12px 28px rgba(0,0,0,.3); }
+.announcement-progress-wrap > span { color: #dff8ff; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+.announcement-progress-wrap > strong { grid-column: 1 / 3; font-size: 11px; letter-spacing: .17em; color: #bcd3dc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.announcement-progress-track { height: 3px; overflow: hidden; background: rgba(213,243,255,.2); }
+.announcement-progress-track i { display: block; width: 100%; height: 100%; transform-origin: left center; background: linear-gradient(90deg, var(--announcement-accent), #7eeaff); box-shadow: 0 0 12px var(--announcement-accent); }
+.announcement-scene.scene-flash::after { content: ""; position: absolute; z-index: 20; inset: 0; pointer-events: none; background: radial-gradient(circle, rgba(255,255,255,.5), color-mix(in srgb, var(--announcement-accent) 35%, transparent) 24%, transparent 63%); animation: announcement-flash .8s ease-out both; }
+
+@keyframes announcement-card-in { 0% { opacity: 0; transform: translateX(13vw) rotateY(-12deg) scale(.9); filter: blur(10px); } 100% { opacity: 1; transform: translateX(0) rotateY(0) scale(1); filter: blur(0); } }
+@keyframes announcement-card-drift { 0% { transform: scale(1); } 100% { transform: scale(1.025); } }
+@keyframes announcement-card-out { 0% { opacity: 1; transform: translateX(0) rotateY(0) scale(1.025); filter: blur(0); } 100% { opacity: 0; transform: translateX(-13vw) rotateY(12deg) scale(.9); filter: blur(9px); } }
+@keyframes announcement-backdrop-drift { 0% { transform: scale(1.12) translate3d(-1%,0,0); } 100% { transform: scale(1.2) translate3d(1.5%,-1%,0); } }
+@keyframes announcement-card-shine { 0%, 20% { transform: translateX(-48%); opacity: 0; } 44% { opacity: .85; } 68%, 100% { transform: translateX(48%); opacity: 0; } }
+@keyframes announcement-sweep { 0%, 14% { left: -32%; opacity: 0; } 45%, 60% { opacity: .7; } 90%, 100% { left: 115%; opacity: 0; } }
+@keyframes announcement-halo { 50% { transform: scale(1.1); opacity: .66; } }
+@keyframes announcement-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes announcement-flash { 0% { opacity: 0; } 28% { opacity: .7; } 100% { opacity: 0; } }
+
 /* Package launcher */
 body.launcher {
   min-height: 100%;

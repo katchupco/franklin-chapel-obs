@@ -15,7 +15,8 @@ This package is designed for a **1920 × 1080** OBS canvas and matches the navy,
 9. `09-countdown.html` — animated 15-minute countdown screen
 10. `10-giving-slide.html` — full-screen giving presentation
 11. `11-giving-overlay.html` — transparent giving lower overlay
-12. `index.html` — package launcher and preview page
+12. `12-announcement-reel.html` — looping cinematic announcement reel with optional voiceovers
+13. `index.html` — package launcher and preview page
 
 ## Add a scene to OBS
 
@@ -45,6 +46,7 @@ Enable **Refresh browser when scene becomes active** to restart the countdown wh
 - **SERVICE LIVE:** camera source + `05-service-live-overlay.html`
 - **GIVING FULL SCREEN:** `10-giving-slide.html`
 - **GIVING OVER CAMERA:** camera source + `11-giving-overlay.html`
+- **ANNOUNCEMENTS:** `12-announcement-reel.html`
 - **GUEST SPEAKER:** camera source + `06-guest-lower-third.html`
 - **HOST:** camera source + `07-host-lower-third.html`
 - **BREAK:** `03-be-right-back.html`
@@ -55,5 +57,7 @@ Enable **Refresh browser when scene becomes active** to restart the countdown wh
 - All animation is built into the browser sources; no video codec or looping media setup is required.
 - Lower thirds animate in, remain visible, and animate out over 12 seconds.
 - Giving graphics list the official Website, Cash App (`$FRANKLINCHAPELNC`), PayPal, and Givelify options.
+- The announcement reel loops automatically. Add or reorder flyers in `announcement-reel-config.js`.
+- To add a voiceover, place the audio file in `assets/announcements/voiceovers`, then enter its path in that announcement's `voiceover` field.
 - Keep the `assets` folder beside the HTML files so the background and flyer load correctly.
 - Open `index.html` in a browser to preview every item in the package.
