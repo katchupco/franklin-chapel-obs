@@ -194,6 +194,15 @@ body.overlay { background: transparent; }
   color: #b9d4df;
 }
 
+.logo-footer img {
+  display: block;
+  width: 138px;
+  height: 78px;
+  margin: 0 auto 8px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px rgba(83, 218, 255, .46));
+}
+
 .pulse-dot {
   display: inline-block;
   width: 12px;
