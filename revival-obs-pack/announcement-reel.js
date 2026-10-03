@@ -13,6 +13,12 @@
   const label = document.getElementById('announcementLabel');
   const progress = document.getElementById('announcementProgress');
   const audio = document.getElementById('announcementAudio');
+  const music = document.getElementById('announcementMusic');
+  const audioSettings = window.FRANKLIN_ANNOUNCEMENT_AUDIO || {};
+  const musicVolume = Math.min(1, Math.max(0, Number(audioSettings.musicVolume) || 0.24));
+  const duckedMusicVolume = Math.min(musicVolume, Math.max(0, Number(audioSettings.duckedMusicVolume) || 0.10));
+  const voiceLeadIn = Math.max(0, Number(audioSettings.voiceLeadIn) || 1000);
+  const fadeMilliseconds = Math.max(100, Number(audioSettings.fadeMilliseconds) || 500);
 
   if (!slides.length) {
     label.textContent = 'ADD ANNOUNCEMENTS IN announcement-reel-config.js';
@@ -26,6 +32,8 @@
 
   let activeIndex = 0;
   let changeTimer;
+  let voiceTimer;
+  let musicFadeTimer;
 
   function restartAnimation(element, animationValue) {
     element.style.animation = 'none';
@@ -33,15 +41,48 @@
     element.style.animation = animationValue;
   }
 
-  function playVoiceover(path) {
+  function fadeMusic(targetVolume) {
+    window.clearInterval(musicFadeTimer);
+    const startVolume = music.volume;
+    const difference = targetVolume - startVolume;
+    const startedAt = performance.now();
+
+    musicFadeTimer = window.setInterval(() => {
+      const elapsed = performance.now() - startedAt;
+      const progressValue = Math.min(1, elapsed / fadeMilliseconds);
+      music.volume = Math.min(1, Math.max(0, startVolume + (difference * progressValue)));
+      if (progressValue >= 1) window.clearInterval(musicFadeTimer);
+    }, 30);
+  }
+
+  function startBackgroundMusic() {
+    const path = audioSettings.backgroundMusic;
+    if (!path) return;
+    music.src = path;
+    music.volume = 0;
+    music.play().then(() => fadeMusic(musicVolume)).catch(() => {});
+  }
+
+  function stopVoiceover() {
+    window.clearTimeout(voiceTimer);
     audio.pause();
     audio.removeAttribute('src');
     audio.load();
-    if (!path) return;
-    audio.src = path;
-    audio.currentTime = 0;
-    audio.play().catch(() => {});
+    fadeMusic(musicVolume);
   }
+
+  function playVoiceover(path) {
+    stopVoiceover();
+    if (!path) return;
+    voiceTimer = window.setTimeout(() => {
+      audio.src = path;
+      audio.currentTime = 0;
+      fadeMusic(duckedMusicVolume);
+      audio.play().catch(() => fadeMusic(musicVolume));
+    }, voiceLeadIn);
+  }
+
+  audio.addEventListener('ended', () => fadeMusic(musicVolume));
 
   function activate(index, firstRun) {
     window.clearTimeout(changeTimer);
@@ -82,5 +123,5 @@
   }
 
   activate(activeIndex, true);
+  startBackgroundMusic();
 })();
-

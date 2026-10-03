@@ -15,7 +15,7 @@ This package is designed for a **1920 × 1080** OBS canvas and matches the navy,
 9. `09-countdown.html` — animated 15-minute countdown screen
 10. `10-giving-slide.html` — full-screen giving presentation
 11. `11-giving-overlay.html` — transparent giving lower overlay
-12. `12-announcement-reel.html` — looping cinematic announcement reel with optional voiceovers
+12. `12-announcement-reel.html` — looping cinematic announcement reel with timed voiceovers and background music
 13. `index.html` — package launcher and preview page
 
 ## Add a scene to OBS
@@ -26,6 +26,7 @@ This package is designed for a **1920 × 1080** OBS canvas and matches the navy,
 4. Set **Width** to `1920` and **Height** to `1080`.
 5. For lower thirds, enable **Refresh browser when scene becomes active** so the entrance animation restarts each time.
 6. Full-screen scenes should be placed at the bottom of the source list. Transparent overlays and lower thirds should be above the camera source.
+7. For the announcement reel, enable **Control audio via OBS** so its narration and music appear together in the OBS Audio Mixer.
 
 ## Change the countdown length
 
@@ -57,7 +58,7 @@ Enable **Refresh browser when scene becomes active** to restart the countdown wh
 - All animation is built into the browser sources; no video codec or looping media setup is required.
 - Lower thirds animate in, remain visible, and animate out over 12 seconds.
 - Giving graphics list the official Website, Cash App (`$FRANKLINCHAPELNC`), PayPal, and Givelify options.
-- The announcement reel loops automatically. Add or reorder flyers in `announcement-reel-config.js`.
-- To add a voiceover, place the audio file in `assets/announcements/voiceovers`, then enter its path in that announcement's `voiceover` field.
+- The announcement reel loops automatically with continuous music, one-second visual lead-ins, and a music duck beneath each voiceover.
+- Add or reorder flyers in `announcement-reel-config.js`. Voiceovers live in `assets/announcements/voiceovers`, and the music bed lives in `assets/announcements/music`.
 - Keep the `assets` folder beside the HTML files so the background and flyer load correctly.
 - Open `index.html` in a browser to preview every item in the package.
