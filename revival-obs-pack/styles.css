@@ -565,21 +565,21 @@ body.overlay { background: transparent; }
 .event-date-chip i { align-self: center; width: 8px; height: 8px; border-radius: 50%; background: #8c5dff; box-shadow: 0 0 13px #7b4bff; animation: pulse 1.8s ease-in-out infinite; }
 .event-date-chip span { color: #dceef5; font-size: 11px; letter-spacing: .2em; }
 
-.orbit-brand { position: absolute; right: 62px; bottom: 36px; width: 250px; height: 250px; display: grid; place-items: center; }
-.orbit-glow { position: absolute; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(112,64,229,.44), rgba(35,206,255,.16) 45%, transparent 71%); filter: blur(14px); animation: orbit-breathe 4s ease-in-out infinite; }
+.orbit-brand { position: absolute; right: 30px; bottom: 20px; width: 190px; height: 190px; display: grid; place-items: center; }
+.orbit-glow { position: absolute; width: 122px; height: 122px; border-radius: 50%; background: radial-gradient(circle, rgba(112,64,229,.44), rgba(35,206,255,.16) 45%, transparent 71%); filter: blur(12px); animation: orbit-breathe 4s ease-in-out infinite; }
 .orbit-ring { position: absolute; border-radius: 50%; border: 2px solid transparent; pointer-events: none; }
-.orbit-ring-one { width: 232px; height: 232px; border-top-color: #7b46ff; border-right-color: rgba(91,221,255,.72); transform: rotate(18deg); animation: orbit-spin 9s linear infinite; }
-.orbit-ring-two { width: 208px; height: 208px; border-left-color: rgba(163,103,255,.9); border-bottom-color: rgba(70,224,255,.56); transform: rotate(-24deg); animation: orbit-spin-reverse 7s linear infinite; }
-.orbit-ring-three { width: 184px; height: 184px; border: 1px solid rgba(230,246,255,.6); box-shadow: 0 0 22px rgba(113,62,255,.28), inset 0 0 18px rgba(37,208,255,.12); }
-.orbit-core { position: relative; width: 156px; height: 156px; overflow: hidden; border-radius: 50%; background: radial-gradient(circle at 40% 25%, rgba(70,83,119,.95), rgba(15,18,40,.98) 62%, rgba(4,8,20,.99)); border: 1px solid rgba(221,247,255,.72); box-shadow: 0 0 38px rgba(102,61,239,.55), inset 0 0 28px rgba(90,216,255,.14); }
+.orbit-ring-one { width: 176px; height: 176px; border-top-color: #7b46ff; border-right-color: rgba(91,221,255,.72); transform: rotate(18deg); animation: orbit-spin 9s linear infinite; }
+.orbit-ring-two { width: 158px; height: 158px; border-left-color: rgba(163,103,255,.9); border-bottom-color: rgba(70,224,255,.56); transform: rotate(-24deg); animation: orbit-spin-reverse 7s linear infinite; }
+.orbit-ring-three { width: 140px; height: 140px; border: 1px solid rgba(230,246,255,.6); box-shadow: 0 0 18px rgba(113,62,255,.28), inset 0 0 14px rgba(37,208,255,.12); }
+.orbit-core { position: relative; width: 118px; height: 118px; overflow: hidden; border-radius: 50%; background: radial-gradient(circle at 40% 25%, rgba(70,83,119,.95), rgba(15,18,40,.98) 62%, rgba(4,8,20,.99)); border: 1px solid rgba(221,247,255,.72); box-shadow: 0 0 30px rgba(102,61,239,.55), inset 0 0 22px rgba(90,216,255,.14); }
 .orbit-face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .orbit-revival { animation: revival-face 14s ease-in-out infinite; }
-.orbit-revival small { font-size: 10px; letter-spacing: .24em; text-indent: .24em; color: #d6f7ff; }
-.orbit-revival strong { margin-top: 4px; font: 900 27px/.9 "Arial Black", Impact, sans-serif; letter-spacing: -.04em; color: transparent; background: linear-gradient(#fff,#8caeba 42%,#fff 59%,#7393a3); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 2px 0 #182d40); }
+.orbit-revival small { font-size: 7px; letter-spacing: .22em; text-indent: .22em; color: #d6f7ff; }
+.orbit-revival strong { margin-top: 4px; font: 900 20px/.9 "Arial Black", Impact, sans-serif; letter-spacing: -.04em; color: transparent; background: linear-gradient(#fff,#8caeba 42%,#fff 59%,#7393a3); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 2px 0 #182d40); }
 .orbit-church { opacity: 0; transform: scale(.3) rotate(-24deg); animation: church-face 14s ease-in-out infinite; }
-.orbit-church img { width: 122px; height: 96px; object-fit: contain; filter: drop-shadow(0 0 14px rgba(115,218,255,.55)); }
+.orbit-church img { width: 92px; height: 72px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(115,218,255,.55)); }
 .orbit-flash { position: absolute; inset: -30%; opacity: 0; background: radial-gradient(circle, white, rgba(119,227,255,.76) 16%, rgba(112,62,255,.42) 34%, transparent 62%); mix-blend-mode: screen; animation: orbit-flash 14s ease-in-out infinite; }
-.solo-orbit { right: 46px; bottom: 32px; }
+.solo-orbit { right: 30px; bottom: 20px; }
 
 /* Giving slide */
 .giving-lockup { position: absolute; inset: 0; display: grid; grid-template-columns: 300px 1fr 640px; align-items: center; gap: 70px; padding: 80px 105px 150px; }
