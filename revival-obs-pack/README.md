@@ -15,7 +15,7 @@ This package is designed for a **1920 × 1080** OBS canvas and matches the navy,
 9. `09-countdown.html` — animated 15-minute countdown screen
 10. `10-giving-slide.html` — full-screen giving presentation
 11. `11-giving-overlay.html` — transparent giving lower overlay
-12. `12-announcement-reel.html` — looping cinematic announcement reel with timed voiceovers and background music
+12. `12-announcement-reel.html` — nine-slide cinematic announcement reel with timed voiceovers and background music
 13. `index.html` — package launcher and preview page
 
 ## Add a scene to OBS

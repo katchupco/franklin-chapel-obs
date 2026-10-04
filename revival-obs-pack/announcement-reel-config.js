@@ -37,10 +37,45 @@ window.FRANKLIN_ANNOUNCEMENTS = [
     voiceover: 'assets/announcements/voiceovers/homecoming.mp3'
   },
   {
+    image: 'assets/announcements/associate-ministers-appreciation.png',
+    label: 'ASSOCIATE MINISTERS APPRECIATION — OCTOBER 18',
+    accent: '#d6a84a',
+    duration: 23500,
+    voiceover: 'assets/announcements/voiceovers/associate-ministers-appreciation.mp3'
+  },
+  {
+    image: 'assets/announcements/awareness-action-day.png',
+    label: 'AWARENESS & ACTION DAY — OCTOBER 24',
+    accent: '#f34e98',
+    duration: 36500,
+    voiceover: 'assets/announcements/voiceovers/awareness-action-day.mp3'
+  },
+  {
+    image: 'assets/announcements/purpose-in-pink.png',
+    label: 'PURPOSE IN PINK — OCTOBER 25',
+    accent: '#ff5aa7',
+    duration: 34000,
+    voiceover: 'assets/announcements/voiceovers/purpose-in-pink.mp3'
+  },
+  {
     image: 'assets/announcements/pastor-appreciation.png',
     label: 'PASTOR APPRECIATION SUNDAY',
     accent: '#b867ff',
     duration: 18500,
     voiceover: 'assets/announcements/voiceovers/pastor-appreciation.mp3'
+  },
+  {
+    image: 'assets/announcements/fall-fest.png',
+    label: 'FALL FEST — OCTOBER 31',
+    accent: '#ff8a24',
+    duration: 26750,
+    voiceover: 'assets/announcements/voiceovers/fall-fest.mp3'
+  },
+  {
+    image: 'assets/announcements/feed-the-band.png',
+    label: 'FEED THE BAND — SCOTLAND HIGH SCHOOL',
+    accent: '#e33a34',
+    duration: 26500,
+    voiceover: 'assets/announcements/voiceovers/feed-the-band.mp3'
   }
 ];
