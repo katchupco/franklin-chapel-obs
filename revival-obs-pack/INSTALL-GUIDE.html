@@ -14,12 +14,22 @@
       <div class="eyebrow">FRANKLIN CHAPEL • CHURCH BOOTH GUIDE</div>
       <h1>Install the One Night of Revival package in OBS.</h1>
       <p>This guide creates a separate Revival scene collection, leaving the church’s Main OBS theme untouched.</p>
-      <div class="buttons"><a class="button" href="index.html">OPEN REVIVAL PACKAGE</a><a class="button alt" href="../downloads/One-Night-of-Revival-OBS-Pack.zip">DOWNLOAD OFFLINE PACKAGE</a><a class="button alt" href="javascript:print()">PRINT GUIDE</a></div>
+      <div class="buttons"><a class="button" href="obs-scene-collection/One-Night-of-Revival-OBS.json" download>DOWNLOAD OBS IMPORT FILE</a><a class="button alt" href="index.html">OPEN REVIVAL PACKAGE</a><a class="button alt" href="../downloads/One-Night-of-Revival-OBS-Pack.zip">DOWNLOAD OFFLINE PACKAGE</a><a class="button alt" href="javascript:print()">PRINT GUIDE</a></div>
     </section>
 
     <div class="callout"><strong>Before starting:</strong> In OBS, choose <b>Scene Collection → Export</b> and save a backup of the current church collection. Do not delete the Main OBS collection.</div>
 
-    <h2>1. Prepare OBS</h2>
+    <h2>Fastest method: import the complete scene collection</h2>
+    <div class="grid">
+      <article class="card"><span class="number">1</span><h3>Download the JSON</h3><p>Use the <b>Download OBS Import File</b> button above and save <b>One-Night-of-Revival-OBS.json</b>.</p></article>
+      <article class="card"><span class="number">2</span><h3>Import it into OBS</h3><p>Choose <b>Scene Collection → Import</b>, browse to the downloaded JSON, and select <b>Import</b>.</p></article>
+      <article class="card"><span class="number">3</span><h3>Open the Revival collection</h3><p>Choose <b>Scene Collection → Franklin Chapel • One Night of Revival</b>. All full-screen scenes and overlays will appear in order.</p></article>
+      <article class="card"><span class="number">4</span><h3>Connect the church camera</h3><p>Open <b>03 • Live Worship</b>. Add the camera above <b>REV • CAMERA SETUP - REPLACE ME</b> and below <b>REV • Live Overlay</b>. Then hide or remove the setup placeholder.</p></article>
+    </div>
+
+    <div class="callout"><strong>Imported for you:</strong> countdown, starting screen, flyer, live overlay, narrated announcements with OBS audio, full-screen giving, giving over camera, guest and host lower thirds, break screen, and service ending.</div>
+
+    <h2>Manual setup option</h2>
     <div class="grid">
       <article class="card"><span class="number">1</span><h3>Create a separate collection</h3><p>Choose <b>Scene Collection → New</b> and name it <b>One Night of Revival</b>.</p></article>
       <article class="card"><span class="number">2</span><h3>Confirm video size</h3><p>Open <b>Settings → Video</b>. Set Base Canvas and Output Resolution to <b>1920 × 1080</b>.</p></article>

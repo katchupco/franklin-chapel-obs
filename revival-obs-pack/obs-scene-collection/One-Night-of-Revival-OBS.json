@@ -1,0 +1,172 @@
+{
+  "name": "Franklin Chapel • One Night of Revival",
+  "current_scene": "00 • Revival Countdown",
+  "current_program_scene": "00 • Revival Countdown",
+  "current_transition": "Fade",
+  "transition_duration": 500,
+  "preview_locked": false,
+  "scaling_enabled": false,
+  "scene_order": [
+    {"name": "00 • Revival Countdown"},
+    {"name": "01 • Starting Soon"},
+    {"name": "02 • Event Flyer"},
+    {"name": "03 • Live Worship"},
+    {"name": "04 • Narrated Announcements"},
+    {"name": "05 • Giving Full Screen"},
+    {"name": "06 • Be Right Back"},
+    {"name": "07 • Service Ending"},
+    {"name": "08 • Live + Guest Lower Third"},
+    {"name": "09 • Live + Host Lower Third"},
+    {"name": "10 • Live + Giving Overlay"}
+  ],
+  "quick_transitions": [
+    {"duration": 300, "hotkeys": [], "id": 1, "name": "Cut"},
+    {"duration": 500, "hotkeys": [], "id": 2, "name": "Fade"}
+  ],
+  "transitions": [],
+  "saved_projectors": [],
+  "groups": [],
+  "modules": {"scripts-tool": []},
+  "sources": [
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Countdown",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/09-countdown.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": true, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Starting Soon",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/02-starting-soon.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Event Flyer",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/01-flyer-display.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • CAMERA SETUP - REPLACE ME",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/13-camera-placeholder.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": false},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Live Overlay",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/05-service-live-overlay.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": false},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Narrated Announcements",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/12-announcement-reel.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": true, "restart_when_active": true, "reroute_audio": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Giving Full Screen",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/10-giving-slide.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Be Right Back",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/03-be-right-back.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Service Ending",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/04-stream-ending.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": false, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Guest Lower Third",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/06-guest-lower-third.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": true, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Host Lower Third",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/07-host-lower-third.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": true, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "REV • Giving Overlay",
+      "settings": {"is_local_file": false, "url": "https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/11-giving-overlay.html", "width": 1920, "height": 1080, "fps": 30, "shutdown": true, "restart_when_active": true},
+      "volume": 1.0, "balance": 0.5, "sync": 0, "mixers": 255, "flags": 0
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "00 • Revival Countdown",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Countdown", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "01 • Starting Soon",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Starting Soon", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "02 • Event Flyer",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Event Flyer", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "03 • Live Worship",
+      "settings": {"custom_size": false, "id_counter": 2, "items": [
+        {"name": "REV • CAMERA SETUP - REPLACE ME", "id": 1, "visible": true, "locked": false, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+        {"name": "REV • Live Overlay", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+      ]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "04 • Narrated Announcements",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Narrated Announcements", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "05 • Giving Full Screen",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Giving Full Screen", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "06 • Be Right Back",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Be Right Back", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "07 • Service Ending",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "REV • Service Ending", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "08 • Live + Guest Lower Third",
+      "settings": {"custom_size": false, "id_counter": 2, "items": [
+        {"name": "03 • Live Worship", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+        {"name": "REV • Guest Lower Third", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+      ]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "09 • Live + Host Lower Third",
+      "settings": {"custom_size": false, "id_counter": 2, "items": [
+        {"name": "03 • Live Worship", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+        {"name": "REV • Host Lower Third", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+      ]}
+    },
+    {
+      "id": "scene", "versioned_id": "scene", "name": "10 • Live + Giving Overlay",
+      "settings": {"custom_size": false, "id_counter": 2, "items": [
+        {"name": "03 • Live Worship", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+        {"name": "REV • Giving Overlay", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+      ]}
+    }
+  ]
+}

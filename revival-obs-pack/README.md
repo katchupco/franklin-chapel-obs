@@ -20,6 +20,15 @@ This package is designed for a **1920 × 1080** OBS canvas and matches the navy,
 
 ## Add a scene to OBS
 
+### Fast import method
+
+1. Download `obs-scene-collection/One-Night-of-Revival-OBS.json`.
+2. In OBS, choose **Scene Collection → Import**.
+3. Select the downloaded JSON file and import **Franklin Chapel • One Night of Revival**.
+4. In `03 • Live Worship`, add the church camera above the setup placeholder and below `REV • Live Overlay`, then hide or remove the placeholder.
+
+### Manual method
+
 1. In **Sources**, click **+** and choose **Browser**.
 2. Choose **Create new**, name the source, and click **OK**.
 3. Check **Local file** and browse to the desired `.html` file.
