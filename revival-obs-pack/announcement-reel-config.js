@@ -37,6 +37,13 @@ window.FRANKLIN_ANNOUNCEMENTS = [
     voiceover: 'assets/announcements/voiceovers/homecoming.mp3'
   },
   {
+    image: 'assets/announcements/feed-the-band.png',
+    label: 'FEED THE BAND — OCTOBER 16',
+    accent: '#e33a34',
+    duration: 26500,
+    voiceover: 'assets/announcements/voiceovers/feed-the-band.mp3'
+  },
+  {
     image: 'assets/announcements/associate-ministers-appreciation.png',
     label: 'ASSOCIATE MINISTERS APPRECIATION — OCTOBER 18',
     accent: '#d6a84a',
@@ -70,12 +77,5 @@ window.FRANKLIN_ANNOUNCEMENTS = [
     accent: '#ff8a24',
     duration: 26750,
     voiceover: 'assets/announcements/voiceovers/fall-fest.mp3'
-  },
-  {
-    image: 'assets/announcements/feed-the-band.png',
-    label: 'FEED THE BAND — SCOTLAND HIGH SCHOOL',
-    accent: '#e33a34',
-    duration: 26500,
-    voiceover: 'assets/announcements/voiceovers/feed-the-band.mp3'
   }
 ];
