@@ -20,6 +20,7 @@
     {"name": "04B • Custom Event Video"},
     {"name": "04C • Narrated Announcement Reel"},
     {"name": "05 • Offering"},
+    {"name": "05A • Giving Overlay"},
     {"name": "06 • Be Right Back"},
     {"name": "07 • Service Ending"},
     {"name": "T • Branded Transition"}
@@ -267,6 +268,25 @@
     {
       "id": "browser_source",
       "versioned_id": "browser_source",
+      "name": "FC • Giving Overlay",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/05a-giving-overlay.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": true,
+        "restart_when_active": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
       "name": "FC • Be Right Back",
       "settings": {
         "is_local_file": false,
@@ -420,11 +440,12 @@
       "name": "02 • Live Worship",
       "settings": {
         "custom_size": false,
-        "id_counter": 3,
+        "id_counter": 4,
         "items": [
           {"name": "FC • Live Frame", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
           {"name": "FC • Controlled Lower Third", "id": 2, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
-          {"name": "FC • Center Scripture Overlay", "id": 3, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
+          {"name": "FC • Center Scripture Overlay", "id": 3, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0},
+          {"name": "FC • Giving Overlay", "id": 4, "visible": false, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}
         ]
       }
     },
@@ -481,6 +502,12 @@
       "versioned_id": "scene",
       "name": "05 • Offering",
       "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Offering", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "05A • Giving Overlay",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Giving Overlay", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
     },
     {
       "id": "scene",

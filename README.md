@@ -30,6 +30,10 @@ Its full-size browser preview includes a **START AUDIO** button when autoplay is
 The Offering scene displays Website, Cash App, PayPal, and Givelify with local,
 scannable QR codes containing the official giving links listed on the church website.
 
+The transparent Giving Overlay is designed for use above the live camera. It lists
+Cash App (`$FRANKLINCHAPELNC`), PayPal (`PAYPAL.ME/FRANKLINCHAPEL`), and online
+giving (`FRANKLINCHAPEL.ORG/GIVE`) in a modern animated lower-third.
+
 ## Add to Streamlabs
 
 1. Add a **Browser Source**.
@@ -47,6 +51,7 @@ scannable QR codes containing the official giving links listed on the church web
 - `04-announcements.html`
 - `04c-announcement-reel.html`
 - `05-offering.html`
+- `05a-giving-overlay.html`
 - `06-be-right-back.html`
 - `07-service-ending.html`
 - `08-pastor-lower-third.html`
