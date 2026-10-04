@@ -94,5 +94,6 @@ body { color: #fff; font-family: Arial, Helvetica, sans-serif; }
   .giving-heading p { display: none; }
   .giving-method { grid-template-columns: 58px minmax(0,1fr); gap: 12px; padding: 20px 16px; }
   .method-icon { width: 55px; height: 55px; font-size: 36px; }
+  .method-copy strong { font-size: 13px; letter-spacing: -.045em; }
   .method-copy small { display: none; }
 }
