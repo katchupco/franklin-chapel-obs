@@ -82,8 +82,8 @@ body { color: #fff; font-family: Arial, Helvetica, sans-serif; }
 .method-copy strong { overflow: hidden; margin: 6px 0 5px; font-size: clamp(16px, 1.25vw, 24px); line-height: 1; letter-spacing: -.025em; text-overflow: ellipsis; white-space: nowrap; }
 .method-copy small { color: #786d7e; font-size: 12px; }
 
-.giving-accent-line { position: absolute; z-index: 4; left: 3%; right: 3%; bottom: -6px; height: 6px; overflow: hidden; border-radius: 999px; background: linear-gradient(90deg, transparent, var(--purple) 18%, var(--gold) 50%, var(--purple) 82%, transparent); box-shadow: 0 0 18px rgba(169,76,255,.5); }
-.giving-accent-line i { display: block; width: 16%; height: 100%; background: #fff; filter: blur(2px); animation: giving-line-run 5s ease-in-out infinite; }
+.giving-accent-line { position: absolute; z-index: 4; left: 8%; right: 8%; bottom: -2px; height: 2px; overflow: hidden; border-radius: 999px; opacity: .48; background: linear-gradient(90deg, transparent, var(--purple) 22%, var(--gold) 50%, var(--purple) 78%, transparent); box-shadow: 0 0 7px rgba(169,76,255,.24); }
+.giving-accent-line i { display: block; width: 12%; height: 100%; background: rgba(255,255,255,.72); filter: blur(1px); animation: giving-line-run 7s ease-in-out infinite; }
 
 @keyframes giving-overlay-in { from { opacity: 0; transform: translate(-50%, 90px) scale(.96); filter: blur(9px) drop-shadow(0 22px 28px rgba(0,0,0,.34)); } to { opacity: 1; transform: translate(-50%, 0) scale(1); filter: blur(0) drop-shadow(0 22px 28px rgba(0,0,0,.34)); } }
 @keyframes giving-sheen { 0%, 16% { left: -20%; opacity: 0; } 42% { opacity: .78; } 72%, 100% { left: 112%; opacity: 0; } }
