@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One Night of Revival — OBS Installation Guide</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#07111c;color:#eef9ff;font:16px/1.55 Arial,Helvetica,sans-serif}a{color:#77e8ff}.wrap{width:min(1040px,92vw);margin:auto;padding:64px 0 90px}.eyebrow{color:#79eaff;font-size:12px;font-weight:900;letter-spacing:.2em}h1{margin:8px 0 16px;font-size:clamp(38px,6vw,70px);line-height:.95;letter-spacing:-.045em}h2{margin:42px 0 14px;font-size:28px}h3{margin:0 0 8px;font-size:20px}p{color:#bfd3dc}.hero,.callout,.card{border:1px solid rgba(114,225,255,.2);background:linear-gradient(135deg,rgba(9,44,66,.9),rgba(6,18,33,.95));box-shadow:0 16px 45px rgba(0,0,0,.22)}.hero{padding:34px;border-left:4px solid #6be8ff}.callout{margin:24px 0;padding:20px 24px;border-left:4px solid #d6a84a}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:24px}.number{display:inline-grid;place-items:center;width:34px;height:34px;margin-bottom:12px;border-radius:50%;background:#18bddc;color:#03101c;font-weight:900}table{width:100%;border-collapse:collapse;background:rgba(3,13,25,.7)}th,td{padding:14px 16px;border:1px solid rgba(150,220,239,.17);text-align:left;vertical-align:top}th{color:#77e8ff;font-size:12px;letter-spacing:.12em}code{color:#fff;background:#0b2233;padding:3px 6px;border-radius:4px;overflow-wrap:anywhere}.checklist li{margin:9px 0}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{display:inline-block;padding:12px 17px;color:#04111b;background:#7be9ff;font-weight:900;text-decoration:none}.button.alt{color:#fff;background:#6730b1}@media(max-width:760px){.grid{grid-template-columns:1fr}table{display:block;overflow-x:auto}}@media print{body{background:#fff;color:#111}.wrap{width:100%;padding:0}.hero,.callout,.card,table{color:#111;background:#fff;box-shadow:none}p{color:#333}.buttons{display:none}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">FRANKLIN CHAPEL • CHURCH BOOTH GUIDE</div>
+      <h1>Install the One Night of Revival package in OBS.</h1>
+      <p>This guide creates a separate Revival scene collection, leaving the church’s Main OBS theme untouched.</p>
+      <div class="buttons"><a class="button" href="index.html">OPEN REVIVAL PACKAGE</a><a class="button alt" href="../downloads/One-Night-of-Revival-OBS-Pack.zip">DOWNLOAD OFFLINE PACKAGE</a><a class="button alt" href="javascript:print()">PRINT GUIDE</a></div>
+    </section>
+
+    <div class="callout"><strong>Before starting:</strong> In OBS, choose <b>Scene Collection → Export</b> and save a backup of the current church collection. Do not delete the Main OBS collection.</div>
+
+    <h2>1. Prepare OBS</h2>
+    <div class="grid">
+      <article class="card"><span class="number">1</span><h3>Create a separate collection</h3><p>Choose <b>Scene Collection → New</b> and name it <b>One Night of Revival</b>.</p></article>
+      <article class="card"><span class="number">2</span><h3>Confirm video size</h3><p>Open <b>Settings → Video</b>. Set Base Canvas and Output Resolution to <b>1920 × 1080</b>.</p></article>
+      <article class="card"><span class="number">3</span><h3>Use hosted Browser Sources</h3><p>The hosted URLs below receive design updates automatically. A downloaded local copy is available as a backup.</p></article>
+      <article class="card"><span class="number">4</span><h3>Preserve camera and audio</h3><p>Add the church camera and microphones to the new Live Worship scene. Do not remove them from the Main collection.</p></article>
+    </div>
+
+    <h2>2. Create the Revival scenes</h2>
+    <p>For every row, create a new OBS scene. Inside it, choose <b>Sources → + → Browser</b>, paste the URL, and set Width <b>1920</b> and Height <b>1080</b>.</p>
+    <table>
+      <thead><tr><th>OBS SCENE</th><th>BROWSER SOURCE URL</th><th>SPECIAL SETTING</th></tr></thead>
+      <tbody>
+        <tr><td>00 • Countdown</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/09-countdown.html</code></td><td>Refresh when active</td></tr>
+        <tr><td>01 • Starting Soon</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/02-starting-soon.html</code></td><td>Full screen</td></tr>
+        <tr><td>02 • Event Flyer</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/01-flyer-display.html</code></td><td>Full screen</td></tr>
+        <tr><td>03 • Live Worship</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/05-service-live-overlay.html</code></td><td>Place above camera</td></tr>
+        <tr><td>04 • Announcements</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/12-announcement-reel.html</code></td><td><b>Control audio via OBS</b></td></tr>
+        <tr><td>05 • Giving</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/10-giving-slide.html</code></td><td>Full screen</td></tr>
+        <tr><td>06 • Be Right Back</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/03-be-right-back.html</code></td><td>Full screen</td></tr>
+        <tr><td>07 • Service Ending</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/04-stream-ending.html</code></td><td>Full screen</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. Add optional overlays to Live Worship</h2>
+    <table>
+      <thead><tr><th>OVERLAY</th><th>URL</th><th>USE</th></tr></thead>
+      <tbody>
+        <tr><td>Giving Overlay</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/11-giving-overlay.html</code></td><td>Keep hidden; show during giving</td></tr>
+        <tr><td>Guest Lower Third</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/06-guest-lower-third.html</code></td><td>Place above camera</td></tr>
+        <tr><td>Host Lower Third</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/07-host-lower-third.html</code></td><td>Place above camera</td></tr>
+        <tr><td>Event Corner Logo</td><td><code>https://katchupco.github.io/franklin-chapel-obs/revival-obs-pack/08-event-corner-bug.html</code></td><td>Optional persistent corner mark</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Announcement audio setup</h2>
+    <ol class="checklist">
+      <li>Open the Announcements Browser Source properties and enable <b>Control audio via OBS</b>.</li>
+      <li>In the Audio Mixer, confirm the Browser Source is not muted.</li>
+      <li>To hear it in the booth, open <b>Advanced Audio Properties</b> and select <b>Monitor and Output</b>.</li>
+      <li>If only livestream viewers need to hear it, <b>Monitor Off</b> is acceptable; the sound still goes to the stream.</li>
+      <li>Enable <b>Shutdown source when not visible</b> and <b>Refresh browser when scene becomes active</b> so the reel restarts cleanly.</li>
+    </ol>
+
+    <h2>5. Source order for Live Worship</h2>
+    <div class="card"><p><b>Top:</b> lower thirds and giving overlay<br><b>Middle:</b> Revival live overlay and corner logo<br><b>Bottom:</b> church camera</p></div>
+
+    <h2>Final booth test</h2>
+    <ul class="checklist">
+      <li>Click through every scene before service.</li>
+      <li>Confirm the announcement music and every voiceover can be heard.</li>
+      <li>Confirm overlays have transparent camera areas.</li>
+      <li>Record a 30-second test and play it back before going live.</li>
+    </ul>
+  </main>
+</body>
+</html>

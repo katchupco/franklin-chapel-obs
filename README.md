@@ -41,6 +41,11 @@ giving (`FRANKLINCHAPEL.ORG/GIVE`) in a modern animated lower-third.
 3. Set the source to 1920 × 1080.
 4. Add one Browser Source to each matching Streamlabs scene.
 
+## Installation guides
+
+- Main theme update: `MAIN-OBS-UPDATE-GUIDE.html`
+- One Night of Revival: `revival-obs-pack/INSTALL-GUIDE.html`
+
 ## Scenes
 
 - `00-welcome.html`

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Main OBS Theme — Update Guide</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#09070b;color:#f8f5fa;font:16px/1.55 Arial,Helvetica,sans-serif}a{color:#d5a4ff}.wrap{width:min(1040px,92vw);margin:auto;padding:64px 0 90px}.eyebrow{color:#c984ff;font-size:12px;font-weight:900;letter-spacing:.2em}h1{margin:8px 0 16px;font-size:clamp(38px,6vw,70px);line-height:.95;letter-spacing:-.045em}h2{margin:42px 0 14px;font-size:28px}h3{margin:0 0 8px;font-size:20px}p{color:#cfc6d4}.hero,.callout,.card{border:1px solid rgba(192,121,255,.2);background:linear-gradient(135deg,rgba(45,15,62,.92),rgba(13,8,17,.96));box-shadow:0 16px 45px rgba(0,0,0,.25)}.hero{padding:34px;border-left:4px solid #aa50f2}.callout{margin:24px 0;padding:20px 24px;border-left:4px solid #e4bc68}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:24px}.number{display:inline-grid;place-items:center;width:34px;height:34px;margin-bottom:12px;border-radius:50%;background:#a94cff;color:#fff;font-weight:900}code{color:#fff;background:#25142f;padding:3px 6px;border-radius:4px;overflow-wrap:anywhere}.checklist li{margin:9px 0}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{display:inline-block;padding:12px 17px;color:#fff;background:#8140bd;font-weight:900;text-decoration:none}.button.gold{color:#1a101e;background:#e4bc68}.source-stack{display:grid;gap:8px;margin-top:15px}.source-stack span{padding:11px 14px;border:1px solid rgba(255,255,255,.12);background:#170d1d}.source-stack span:first-child{border-color:#b85fff}.warning{color:#ffe7ae}@media(max-width:760px){.grid{grid-template-columns:1fr}}@media print{body{background:#fff;color:#111}.wrap{width:100%;padding:0}.hero,.callout,.card{color:#111;background:#fff;box-shadow:none}p{color:#333}.buttons{display:none}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">FRANKLIN CHAPEL • MAIN OBS THEME</div>
+      <h1>Add the latest scenes without disturbing the current setup.</h1>
+      <p>This update adds the nine-slide narrated announcement reel and the transparent giving overlay to the existing Cinematic Noir Main OBS theme.</p>
+      <div class="buttons"><a class="button" href="preview-all.html">OPEN COMPLETE PREVIEW</a><a class="button gold" href="downloads/Franklin-Chapel-GitHub-Hosted-Install.zip">DOWNLOAD UPDATED PACKAGE</a><a class="button" href="javascript:print()">PRINT GUIDE</a></div>
+    </section>
+
+    <div class="callout"><strong>Protect the church setup first:</strong> In OBS, choose <b>Scene Collection → Export</b> and save the current collection. The recommended method below adds only the new sources and keeps existing cameras, microphones, and scenes.</div>
+
+    <h2>Recommended: update the existing collection manually</h2>
+    <div class="grid">
+      <article class="card"><span class="number">1</span><h3>Add the narrated reel scene</h3><p>Create a scene named <b>04C • Narrated Announcement Reel</b>. Add a Browser Source named <b>FC • Narrated Announcement Reel</b>.</p></article>
+      <article class="card"><span class="number">2</span><h3>Use this reel URL</h3><p><code>https://katchupco.github.io/franklin-chapel-obs/04c-announcement-reel.html</code></p><p>Set Width <b>1920</b>, Height <b>1080</b>, enable <b>Control audio via OBS</b>, <b>Shutdown when not visible</b>, and <b>Refresh when active</b>.</p></article>
+      <article class="card"><span class="number">3</span><h3>Add the giving overlay</h3><p>Open <b>02 • Live Worship</b>. Add a Browser Source named <b>FC • Giving Overlay</b> using:</p><p><code>https://katchupco.github.io/franklin-chapel-obs/05a-giving-overlay.html</code></p></article>
+      <article class="card"><span class="number">4</span><h3>Keep it hidden until giving</h3><p>Set the giving source to 1920 × 1080 and place it above the camera. Leave its eye icon off. Turn it on during giving and off afterward.</p></article>
+    </div>
+
+    <h2>Correct source order in 02 • Live Worship</h2>
+    <div class="card">
+      <p>OBS displays sources from top to bottom. Arrange the new source like this:</p>
+      <div class="source-stack">
+        <span><b>TOP:</b> FC • Giving Overlay — normally hidden</span>
+        <span>FC • Controlled Lower Third</span>
+        <span>FC • Center Scripture Overlay</span>
+        <span>FC • Live Frame</span>
+        <span><b>BOTTOM:</b> Church camera</span>
+      </div>
+    </div>
+
+    <h2>Announcement sound check</h2>
+    <ol class="checklist">
+      <li>Switch to <b>04C • Narrated Announcement Reel</b>.</li>
+      <li>Confirm its Browser Source appears in the Audio Mixer and is not muted.</li>
+      <li>Open <b>Advanced Audio Properties</b>. Choose <b>Monitor and Output</b> if the booth operator needs to hear it.</li>
+      <li>Let the first slide play through one complete voiceover and transition.</li>
+      <li>If sound does not start, open Browser Source Properties and select <b>Refresh cache of current page</b>.</li>
+    </ol>
+
+    <h2>Optional: import a fresh updated collection</h2>
+    <div class="callout"><strong class="warning">Use this only if you want a separate fresh collection.</strong> Importing does not update the currently open collection in place.</div>
+    <ol class="checklist">
+      <li>Download and unzip the updated package using the button at the top.</li>
+      <li>In OBS, choose <b>Scene Collection → Import</b>.</li>
+      <li>Select <code>Franklin-Chapel-Cinematic-Noir.json</code> from the <b>OBS Scene Collections</b> folder.</li>
+      <li>Switch to the imported <b>Franklin Chapel • GitHub Hosted</b> collection.</li>
+      <li>Reconnect the church camera and confirm microphones before using it live.</li>
+    </ol>
+
+    <h2>What the update includes</h2>
+    <ul class="checklist">
+      <li><b>04C • Narrated Announcement Reel:</b> nine event slides in date order, voiceovers, background music, and automatic music ducking.</li>
+      <li><b>05A • Giving Overlay:</b> transparent lower overlay with Cash App, PayPal, and online giving.</li>
+      <li>The Giving Overlay is included as a hidden source inside <b>02 • Live Worship</b> in the fresh downloadable collection.</li>
+      <li>Existing announcement, offering, camera-announcement, and custom-video scenes remain available.</li>
+    </ul>
+
+    <h2>Final safety check</h2>
+    <ul class="checklist">
+      <li>Make a short local recording before Sunday.</li>
+      <li>Check that the giving overlay does not cover faces or captions.</li>
+      <li>Verify all narration is present in the recording.</li>
+      <li>Keep the exported backup until the updated collection has completed a full service successfully.</li>
+    </ul>
+  </main>
+</body>
+</html>
