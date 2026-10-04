@@ -18,6 +18,7 @@
     {"name": "04 • Announcements"},
     {"name": "04A • Camera Announcements"},
     {"name": "04B • Custom Event Video"},
+    {"name": "04C • Narrated Announcement Reel"},
     {"name": "05 • Offering"},
     {"name": "06 • Be Right Back"},
     {"name": "07 • Service Ending"},
@@ -217,6 +218,26 @@
         "close_when_inactive": true,
         "clear_on_media_end": false,
         "hw_decode": true
+      },
+      "volume": 1.0,
+      "balance": 0.5,
+      "sync": 0,
+      "mixers": 255,
+      "flags": 0
+    },
+    {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "name": "FC • Narrated Announcement Reel",
+      "settings": {
+        "is_local_file": false,
+        "url": "https://katchupco.github.io/franklin-chapel-obs/04c-announcement-reel.html",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "shutdown": true,
+        "restart_when_active": true,
+        "reroute_audio": true
       },
       "volume": 1.0,
       "balance": 0.5,
@@ -448,6 +469,12 @@
       "versioned_id": "scene",
       "name": "04B • Custom Event Video",
       "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Custom Event Video", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 2, "bounds_align": 0, "bounds": {"x": 1920.0, "y": 1080.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
+    },
+    {
+      "id": "scene",
+      "versioned_id": "scene",
+      "name": "04C • Narrated Announcement Reel",
+      "settings": {"custom_size": false, "id_counter": 1, "items": [{"name": "FC • Narrated Announcement Reel", "id": 1, "visible": true, "locked": true, "rot": 0.0, "pos": {"x": 0.0, "y": 0.0}, "scale": {"x": 1.0, "y": 1.0}, "align": 5, "bounds_type": 0, "bounds_align": 0, "bounds": {"x": 0.0, "y": 0.0}, "crop_left": 0, "crop_top": 0, "crop_right": 0, "crop_bottom": 0}]}
     },
     {
       "id": "scene",

@@ -42,6 +42,7 @@
       ["03 • Scripture","03-scripture.html"],
       ["04 • Announcements","04-announcements.html"],
       ["04A • Camera Announcements","04a-camera-announcements.html",true],
+      ["04C • Narrated Announcement Reel","04c-announcement-reel.html"],
       ["05 • Offering","05-offering.html"],
       ["06 • Be Right Back","06-be-right-back.html"],
       ["07 • Service Ending / Farewell","07-service-ending.html"],
@@ -50,7 +51,7 @@
     const gallery=document.querySelector("#gallery");
     scenes.forEach(([name,file,isLive])=>{
       const card=document.createElement("article");
-        const versionedFile=`${file}?v=50fb0a0`;
+        const versionedFile=`${file}?v=main-announcement-1`;
         card.innerHTML=`<div class="meta"><h2>${name}</h2><a href="${versionedFile}" target="_blank">OPEN FULL SIZE ↗</a></div><div class="shell">${isLive?'<div class="live-note">CAMERA AREA</div>':''}<iframe src="${versionedFile}" title="${name}"></iframe></div>`;
       gallery.append(card);
     });

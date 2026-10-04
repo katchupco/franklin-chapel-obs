@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Franklin Chapel Cinematic Noir — Narrated Announcement Reel</title>
+  <link rel="stylesheet" href="main-announcement-reel.css?v=1">
+</head>
+<body class="announcement-page">
+  <main class="announcement-scene" id="announcementScene">
+    <div class="announcement-backdrop" id="announcementBackdrop"></div>
+    <div class="announcement-noir-wash"></div>
+    <div class="announcement-light-leak"></div>
+    <div class="announcement-grain"></div>
+    <div class="announcement-vignette"></div>
+
+    <div class="announcement-faith-line">WE BELIEVE GOD</div>
+
+    <header class="announcement-brand">
+      <img src="assets/franklin-lower-third-mark.png" alt="Franklin Chapel logo">
+      <span><strong>FRANKLIN CHAPEL</strong><small>LAURINBURG, NORTH CAROLINA</small></span>
+    </header>
+
+    <aside class="announcement-section-mark" aria-hidden="true">
+      <span>UPCOMING</span><i></i><strong>AT FRANKLIN CHAPEL</strong>
+    </aside>
+
+    <section class="announcement-stage" id="announcementStage">
+      <div class="announcement-halo"></div>
+      <div class="announcement-card" id="announcementCard">
+        <img id="announcementImage" alt="Church announcement">
+        <div class="announcement-glass"></div>
+        <div class="announcement-card-shine"></div>
+      </div>
+      <div class="announcement-reflection" id="announcementReflection"></div>
+    </section>
+
+    <footer class="announcement-progress-wrap">
+      <span id="announcementCount">01 / 09</span>
+      <div class="announcement-progress-track"><i id="announcementProgress"></i></div>
+      <strong id="announcementLabel">UPCOMING AT FRANKLIN CHAPEL</strong>
+    </footer>
+
+    <button class="announcement-audio-start" id="announcementAudioStart" type="button" hidden>
+      <span>▶</span>
+      <strong>START AUDIO</strong>
+      <small>Music + voiceovers</small>
+    </button>
+
+    <audio id="announcementMusic" preload="auto" loop></audio>
+    <audio id="announcementAudio" preload="auto"></audio>
+  </main>
+
+  <script src="main-announcement-reel-config.js?v=1"></script>
+  <script>
+    if (window.self !== window.top) {
+      window.FRANKLIN_ANNOUNCEMENT_AUDIO.backgroundMusic = "";
+      window.FRANKLIN_ANNOUNCEMENTS.forEach(slide => { slide.voiceover = ""; });
+    }
+  </script>
+  <script src="revival-obs-pack/announcement-reel.js?v=b5aec00"></script>
+</body>
+</html>

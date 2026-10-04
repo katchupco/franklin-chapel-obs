@@ -23,6 +23,10 @@ The Announcements scene reads the next three events from Franklin Chapel’s pub
 event feed when it opens and refreshes every 15 minutes. If the internet or website
 is unavailable, three built-in event cards remain visible.
 
+The Narrated Announcement Reel uses the nine current event graphics in date order,
+with timed voiceovers, continuous background music, and automatic music ducking.
+Its full-size browser preview includes a **START AUDIO** button when autoplay is blocked.
+
 The Offering scene displays Website, Cash App, PayPal, and Givelify with local,
 scannable QR codes containing the official giving links listed on the church website.
 
@@ -41,6 +45,7 @@ scannable QR codes containing the official giving links listed on the church web
 - `02-live-worship.html`
 - `03-scripture.html`
 - `04-announcements.html`
+- `04c-announcement-reel.html`
 - `05-offering.html`
 - `06-be-right-back.html`
 - `07-service-ending.html`
