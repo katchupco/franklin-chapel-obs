@@ -1,5 +1,13 @@
 # Franklin Chapel Cinematic Noir Package
 
+## Homecoming OBS package
+
+The separate `homecoming-obs-pack` folder contains the complete **150 Years • Homecoming • Legacy In Motion** OBS theme, its installation guide, and an OBS 32-native scene collection import file.
+
+- Package launcher: `homecoming-obs-pack/index.html`
+- Installation guide: `homecoming-obs-pack/INSTALL-GUIDE.html`
+- Scene collection: `homecoming-obs-pack/obs-scene-collection/Franklin-Chapel-Homecoming-OBS.json`
+
 This package uses the selected Cinematic Noir broadcast identity: full-bleed Franklin Chapel worship photography, deep black overlays, editorial typography, restrained purple accents, and thin white framing.
 
 Every full-screen scene uses different current Franklin Chapel website media selected for its purpose:
