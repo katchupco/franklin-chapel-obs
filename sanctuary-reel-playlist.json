@@ -1,0 +1,66 @@
+{
+  "version": "2026-10-23",
+  "timeZone": "America/New_York",
+  "clips": [
+    {
+      "id": "00-welcome",
+      "label": "Welcome to Franklin Chapel",
+      "src": "assets/sanctuary-reel-2026-10-23/00-welcome.mp4",
+      "expires": null
+    },
+    {
+      "id": "01-breast-cancer-awareness",
+      "label": "Awareness matters",
+      "src": "assets/sanctuary-reel-2026-10-23/01-breast-cancer-awareness.mp4",
+      "expires": "2026-10-31"
+    },
+    {
+      "id": "02-clergy-appreciation",
+      "label": "Honor our clergy",
+      "src": "assets/sanctuary-reel-2026-10-23/02-clergy-appreciation.mp4",
+      "expires": "2026-10-31"
+    },
+    {
+      "id": "03-awareness-action-day",
+      "label": "Awareness & action",
+      "src": "assets/sanctuary-reel-2026-10-23/03-awareness-action-day.mp4",
+      "expires": "2026-10-24"
+    },
+    {
+      "id": "04-purpose-in-pink",
+      "label": "Purpose in pink",
+      "src": "assets/sanctuary-reel-2026-10-23/04-purpose-in-pink.mp4",
+      "expires": "2026-10-25"
+    },
+    {
+      "id": "05-pastor-appreciation",
+      "label": "A day of appreciation",
+      "src": "assets/sanctuary-reel-2026-10-23/05-pastor-appreciation.mp4",
+      "expires": "2026-10-25"
+    },
+    {
+      "id": "06-fall-fest",
+      "label": "Fall fest",
+      "src": "assets/sanctuary-reel-2026-10-23/06-fall-fest.mp4",
+      "expires": "2026-10-31"
+    },
+    {
+      "id": "07-november-worship",
+      "label": "Sunday worship",
+      "src": "assets/sanctuary-reel-2026-10-23/07-november-worship.mp4",
+      "expires": "2026-11-01"
+    },
+    {
+      "id": "08-bigz-tv-promo",
+      "label": "BIG-Z TV",
+      "src": "assets/sanctuary-reel-2026-10-23/08-bigz-tv-promo.mp4",
+      "expires": null
+    },
+    {
+      "id": "09-see-you-sunday",
+      "label": "See you at Franklin Chapel",
+      "src": "assets/sanctuary-reel-2026-10-23/09-see-you-sunday.mp4",
+      "expires": null
+    }
+  ]
+}
