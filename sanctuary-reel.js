@@ -8,7 +8,7 @@
  function eligible(entries,date=easternDate()){
   return entries.filter(item=>!item.expires||item.expires>=date);
  }
- window.FranklinSanctuaryReel={eligible,easternDate,version:'2026-10-23'};
+ window.FranklinSanctuaryReel={eligible,easternDate,version:'2026-10-25-fullscreen'};
  async function initialize(){
   const $=id=>document.getElementById(id),video=$('reel'),query=new URLSearchParams(location.search);
   const embedded=window.self!==window.top;
@@ -50,7 +50,7 @@
   });
   $('retryButton').addEventListener('click',()=>{failed.clear();current='';next();});
   try{
-   const response=await fetch('sanctuary-reel-playlist.json?v=20261023',{cache:'no-store'});
+   const response=await fetch('sanctuary-reel-playlist.json?v=20261025fullscreen',{cache:'no-store'});
    if(!response.ok)throw new Error('Playlist unavailable');
    const data=await response.json();all=Array.isArray(data.clips)?data.clips:[];
    await load(available()[0]);
