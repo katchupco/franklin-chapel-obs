@@ -1,0 +1,4 @@
+@echo off
+cd /d "%~dp0"
+powershell -NoProfile -Command "$ErrorActionPreference='Stop'; $base=Get-Location; $p=Join-Path $base 'obs-scene-collection/Pastor-Appreciation-OBS.json'; $d=Get-Content -Raw -LiteralPath $p | ConvertFrom-Json; $d.name='Franklin Chapel - Pastor Appreciation - Oct 25 2026 - Offline'; foreach($s in $d.sources){if($s.id -eq 'browser_source'){$f=($s.settings.url -split '/')[-1].Split('?')[0]; $local=Join-Path $base $f; if(!(Test-Path -LiteralPath $local)){throw ('Missing scene file: '+$f)}; $s.settings.is_local_file=$true; $s.settings | Add-Member -Force -NotePropertyName local_file -NotePropertyValue $local; $s.settings.PSObject.Properties.Remove('url')}}; $target=Join-Path $base 'Pastor-Appreciation-OFFLINE.json'; $json=$d | ConvertTo-Json -Depth 60; [System.IO.File]::WriteAllText($target,$json,(New-Object System.Text.UTF8Encoding($false))); Write-Host ('Ready. Import this in OBS: '+$target)"
+pause

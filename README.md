@@ -82,3 +82,11 @@ The lower thirds use the supplied white Franklin Chapel church mark in `assets/f
 The `obs-tool` folder contains an OBS Custom Browser Dock that manages six lower-third presets from one panel. See `obs-tool/README.md` for setup.
 
 To change the speaker, sermon title, scripture text, or reference, open the matching numbered HTML file in a text editor and replace the placeholder text in its `src=` line.
+
+## Pastor Appreciation Sunday — October 25, 2026
+
+The new `pastor-appreciation-obs-pack` contains 18 matching purple/silver scenes, a native OBS import, camera overlays, both guest-speaker titles, countdown, giving graphics, and the fixed five-item Sunday reel.
+
+- Preview: `pastor-appreciation-obs-pack/index.html`
+- Guide: `pastor-appreciation-obs-pack/START-HERE.html`
+- Import: `pastor-appreciation-obs-pack/obs-scene-collection/Pastor-Appreciation-OBS.json`

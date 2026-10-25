@@ -1,0 +1,153 @@
+[
+  {
+    "id": "flyer",
+    "file": "00-event-flyer.html",
+    "scene": "00 • Pastor Appreciation Flyer",
+    "label": "Event flyer",
+    "kind": "flyer"
+  },
+  {
+    "id": "welcome",
+    "file": "01-welcome.html",
+    "scene": "01 • Welcome Home",
+    "label": "Welcome home",
+    "kind": "full",
+    "title": "Welcome home.",
+    "sub": "Pastor Appreciation Sunday"
+  },
+  {
+    "id": "starting",
+    "file": "02-starting-soon.html",
+    "scene": "02 • Worship Begins Soon",
+    "label": "Starting soon",
+    "kind": "full",
+    "title": "Worship begins soon.",
+    "sub": "Pastor Appreciation Sunday"
+  },
+  {
+    "id": "countdown",
+    "file": "03-countdown.html",
+    "scene": "03 • Five Minute Countdown",
+    "label": "Five-minute countdown",
+    "kind": "countdown"
+  },
+  {
+    "id": "live",
+    "file": "04-live-worship.html",
+    "scene": "04 • Live Worship — Clean",
+    "label": "Live worship",
+    "kind": "overlay"
+  },
+  {
+    "id": "pastor",
+    "file": "05-pastor-title.html",
+    "scene": "05 • Live + Pastor Morrison",
+    "label": "Pastor Morrison title",
+    "kind": "person",
+    "kicker": "OUR PASTOR",
+    "name": "Rev. John T. Morrison, Jr.",
+    "role": "Franklin Chapel A.M.E. Zion Church"
+  },
+  {
+    "id": "firstlady",
+    "file": "06-first-lady-title.html",
+    "scene": "06 • Live + First Lady Morrison",
+    "label": "First Lady Morrison title",
+    "kind": "person",
+    "kicker": "OUR FIRST LADY",
+    "name": "Renée Morrison",
+    "role": "Honoring a heart for ministry and service"
+  },
+  {
+    "id": "morning",
+    "file": "07-morning-speaker.html",
+    "scene": "07 • Live + Dr. Carlos Perkins — 10 AM",
+    "label": "Morning guest speaker",
+    "kind": "person",
+    "kicker": "10 AM GUEST SPEAKER",
+    "name": "Dr. Carlos Perkins",
+    "role": "Bethel AME • Indianapolis, Indiana"
+  },
+  {
+    "id": "afternoon",
+    "file": "08-afternoon-speaker.html",
+    "scene": "08 • Live + Pastor Gibson — 3 PM",
+    "label": "Afternoon guest speaker",
+    "kind": "person",
+    "kicker": "3 PM GUEST SPEAKER",
+    "name": "Pastor Darrell “BJ” Gibson",
+    "role": "Nazareth MBC • Wagram, North Carolina"
+  },
+  {
+    "id": "scripture",
+    "file": "09-scripture-title.html",
+    "scene": "09 • Live + Scripture Reading",
+    "label": "Scripture reading title",
+    "kind": "scripture"
+  },
+  {
+    "id": "offering",
+    "file": "10-offering.html",
+    "scene": "10 • Ways to Give — Full Screen",
+    "label": "Offering",
+    "kind": "offering"
+  },
+  {
+    "id": "giving",
+    "file": "11-giving-overlay.html",
+    "scene": "11 • Live + Ways to Give",
+    "label": "Giving over camera",
+    "kind": "giving"
+  },
+  {
+    "id": "break",
+    "file": "12-be-right-back.html",
+    "scene": "12 • Be Right Back",
+    "label": "Be right back",
+    "kind": "full",
+    "title": "We’ll be right back.",
+    "sub": "Stay with us. The celebration continues."
+  },
+  {
+    "id": "ending",
+    "file": "13-service-ending.html",
+    "scene": "13 • Thank You for Worshiping",
+    "label": "Service ending",
+    "kind": "full",
+    "title": "Thank you for worshiping.",
+    "sub": "Celebrating faithful leadership. Honoring a shared journey."
+  },
+  {
+    "id": "announcements",
+    "file": "14-sunday-announcements.html",
+    "scene": "14 • Sunday Announcement Reel",
+    "label": "Sunday announcements",
+    "kind": "video",
+    "media": "sunday-announcements.mp4"
+  },
+  {
+    "id": "bigz",
+    "file": "15-big-z-tv-promo.html",
+    "scene": "15 • BIG-Z TV Promo",
+    "label": "BIG-Z TV promo",
+    "kind": "video",
+    "media": "big-z-tv-promo.mp4"
+  },
+  {
+    "id": "background",
+    "file": "16-celebration-background.html",
+    "scene": "16 • Celebration Background",
+    "label": "Celebration background",
+    "kind": "background"
+  },
+  {
+    "id": "standby",
+    "file": "17-camera-standby.html",
+    "scene": "CAMERA + AUDIO • Connect Once",
+    "label": "Camera standby",
+    "kind": "full",
+    "title": "Pastor Appreciation",
+    "sub": "Sunday • October 25, 2026",
+    "standby": true
+  }
+]
